@@ -12,20 +12,24 @@
 }
 
 :root {
-  --bg-color: #e9e9e9;
-  --light-gray: ;
+  --primary-color: #e9e9e9;
+  --secondary-color: #222222;
+  --extra: #1c1c1c;
+  --prompt: #797979;
+  --font-styled: "Cormorant Garamond", serif;
+  --font-text: "Lexend", sans-serif;
 }
 
 body {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-  font-style: normal;
-  background-color: var(--bg-color);
+  font-family: var(--font-styled);
+  background-color: var(--primary-color);
 }
 
 section {
   height: 100vh;
 }
+
+/* SECTION ONE [LANDING] */
 
 .ul-nav {
   display: flex;
@@ -41,12 +45,21 @@ section {
 
 .ul-nav a {
   text-decoration: none;
-  color: #222222;
   text-transform: uppercase;
-  font-family: "Lexend", sans-serif;
+  font-family: var(--font-text);
   font-weight: 400;
-  color: #1c1c1c;
-  /* mudar a fonte */
+  color: var(--extra);
+}
+
+.ul-nav a:hover{
+  color: var(--prompt);
+}
+
+.hover-effect:hover {
+  background: linear-gradient(to right, transparent 30%, var(--prompt), black);
+  background-size: 100% 1px; 
+  background-position: 0 100%; 
+  background-repeat: no-repeat;
 }
 
 .content-container {
@@ -79,7 +92,7 @@ section {
 .menu-items {
   height: 25px;
   width: 5px;
-  background-color: #797979;
+  background-color: var(--prompt);
   /* border-radius: 12px; */
   cursor: pointer;
 }
@@ -93,9 +106,19 @@ section {
 
 .footer-scroll a {
   font-size: 3rem;
-  color: #222222;
+  color: var(--secondary-color);
 }
 
+/* SECTION TWO [ABOUT]*/
+
 #secondary-container {
-  background-color: #1c1c1c;
+  background-color: var(--extra);
+}
+
+.title-second {
+  color: var(--primary-color);
+  font-family: var(--font-text);
+  font-size: 4rem;
+  padding-top: 1%;
+  margin-left: 5%;
 }

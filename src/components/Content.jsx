@@ -13,7 +13,7 @@ function Content() {
       <Footer />
       </section>
       <section id="secondary-container">
-        <p>a</p>
+        <h2 className="title-second">About me</h2>
       </section>
 
     </>
