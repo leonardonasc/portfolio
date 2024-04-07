@@ -51,27 +51,68 @@ section {
   color: var(--extra);
 }
 
-.ul-nav a:hover{
+.ul-nav a:hover {
   color: var(--prompt);
 }
 
 .hover-effect:hover {
   background: linear-gradient(to right, transparent 30%, var(--prompt), black);
-  background-size: 100% 1px; 
-  background-position: 0 100%; 
+  background-size: 100% 1px;
+  background-position: 0 100%;
   background-repeat: no-repeat;
 }
 
 .content-container {
   display: flex;
-  align-items: center;
   text-align: left;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+}
+
+.title-h1 {
+  font-family: var(--font-text);
+  font-weight: 200;
+  color: #ababab;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.line {
+  margin-top: 0.45rem;
 }
 
 .title-content {
   white-space: pre;
   font-size: 3rem;
-  margin-left: 5%;
+}
+
+.title-items {
+  display: flex;
+  gap: 2rem;
+  padding-top: 7rem;
+  font-family: var(--font-text);
+  
+}
+
+.title-anchor {
+  gap: 0.7rem;
+  text-decoration: none;
+  display: flex;
+  background-color: var(--extra);
+  color: var(--primary-color);
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 10%;
+  justify-content: center;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.title-anchor:hover {
+
 }
 
 .br-span {
@@ -93,7 +134,7 @@ section {
   height: 25px;
   width: 5px;
   background-color: var(--prompt);
-  /* border-radius: 12px; */
+  border-radius: 12px;
   cursor: pointer;
 }
 
@@ -111,14 +152,40 @@ section {
 
 /* SECTION TWO [ABOUT]*/
 
-#secondary-container {
-  background-color: var(--extra);
-}
-
-.title-second {
-  color: var(--primary-color);
-  font-family: var(--font-text);
-  font-size: 4rem;
-  padding-top: 1%;
+.secondary-container {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-direction: column;
+  gap: 10px;
   margin-left: 5%;
 }
+
+.title-about {
+  color: var(--extra);
+  font-family: var(--font-text);
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+.p-about {
+  width: 30%;
+  font-size: 1.8rem;
+}
+
+/* SECTION THREE [SKILLS] */
+
+.tertiary-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 5%;
+}
+
+.title-projects {
+  color: var(--extra);
+  font-family: var(--font-text);
+  font-size: 4rem;
+  font-weight: 200;
+}
+
