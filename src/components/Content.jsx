@@ -53,8 +53,7 @@ function Content() {
           in laboriosam ratione rerum quidem sunt harum reprehenderit voluptatem
           eos dicta voluptatibus voluptate praesentium, provident, dolorem
           delectus officiis aliquam excepturi! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit.<br></br>
-          <br /> Nobis corrupti saepe doloribus, molestiae reprehenderit ducimus
+          consectetur adipisicing elit.Nobis corrupti saepe doloribus, molestiae reprehenderit ducimus
           accusamus nulla laborum iste illum, labore officiis odio vel enim
           atque sequi corporis, adipisci earum! Lorem ipsum dolor sit amet
           consectetur adipisicing elit. Minus repellendus dolor itaque
@@ -70,6 +69,7 @@ function Content() {
           <Card />
           <Card />
         </div>
+        <Footer/>
       </section>
     </>
   );

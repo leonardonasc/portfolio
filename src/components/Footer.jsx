@@ -1,9 +1,10 @@
 import { FaAngleDoubleDown } from "react-icons/fa";
 
-function Footer() {
+function Footer(props) {
   return(
     <div className="footer-scroll">
-    <a href="#secondary-container" ><FaAngleDoubleDown/></a>
+      {/* remover a ancora de baixo e trocar para uma div pra fazer o props dela */}
+    <a href="#secondary-container" ><FaAngleDoubleDown/></a> 
     </div>
   );
 }
