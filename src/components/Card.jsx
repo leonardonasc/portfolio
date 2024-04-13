@@ -1,13 +1,19 @@
-import cardImg from '../assets/img/cateeo.jpg';
+import cardImg from "../assets/img/cateeo.jpg";
+// importar imagem como funcao src={cardImg}
 
 function Card() {
-  return(
-  
-      <div className="card">
-        <img src={cardImg} alt="alt da img" />
-        <h1>Projeto ?</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia excepturi odio eum, voluptatibus maxime, magni quod distinctio ullam recusandae molestias dignissimos eligendi dolorum iusto error corrupti animi officiis quae amet.</p>
+  return (
+    <div className="cards">
+      <div className="card card1">
+        <img src="" alt="card1" className="bgc"/>
       </div>
+      <div className="card card2">
+        <img src="" alt="card2" />
+      </div>
+      <div className="card card3">
+        <img src="" alt="card3" />
+      </div>
+    </div>
   );
 }
 

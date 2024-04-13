@@ -59,18 +59,18 @@ function Content() {
           consectetur adipisicing elit. Minus repellendus dolor itaque
           blanditiis
         </p>
-        <Footer />
       </section>
 
       <section id="tertiary-container" className="tertiary-container">
         <h2 className="title-projects">Projects</h2>
         <div className="cards-div">
           <Card />
-          <Card />
-          <Card />
-        </div>
-        <Footer/>
+        </div> 
       </section>
+
+      {/* <section id="contact" className="contact">
+
+      </section> */}
     </>
   );
 }
