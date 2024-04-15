@@ -62,7 +62,7 @@ function Content() {
       </section>
 
       <section id="tertiary-container" className="tertiary-container">
-        <h2 className="title-projects">Projects</h2>
+        <h2 className="title-projects">Last Projects</h2>
         <div className="cards-div">
           <Card />
         </div> 
