@@ -3,7 +3,7 @@ import { RiGithubFill } from "react-icons/ri";
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { AiOutlineLine } from "react-icons/ai";
-
+import { IoMailOpenOutline } from "react-icons/io5";
 // COMPONENTS
 import Footer from "./Footer";
 import Card from "../components/Card";
@@ -53,24 +53,26 @@ function Content() {
           in laboriosam ratione rerum quidem sunt harum reprehenderit voluptatem
           eos dicta voluptatibus voluptate praesentium, provident, dolorem
           delectus officiis aliquam excepturi! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit.Nobis corrupti saepe doloribus, molestiae reprehenderit ducimus
-          accusamus nulla laborum iste illum, labore officiis odio vel enim
-          atque sequi corporis, adipisci earum! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Minus repellendus dolor itaque
-          blanditiis
+          consectetur adipisicing elit.Nobis corrupti saepe doloribus, molestiae
+          reprehenderit ducimus accusamus nulla laborum iste illum, labore
+          officiis odio vel enim atque sequi corporis, adipisci earum! Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Minus repellendus
+          dolor itaque blanditiis
         </p>
       </section>
 
       <section id="tertiary-container" className="tertiary-container">
-        <h2 className="title-projects">Last Projects</h2>
+        <h2 className="title-projects">Lastest Projects</h2>
         <div className="cards-div">
           <Card />
-        </div> 
+        </div>
       </section>
 
-      {/* <section id="contact" className="contact">
-
-      </section> */}
+      <section id="contact" className="contact">
+        <a className="contact__anchor" href="mailto:leonardo.nasmt@gmail.com">
+          Contacte me <IoMailOpenOutline />
+        </a>
+      </section>
     </>
   );
 }

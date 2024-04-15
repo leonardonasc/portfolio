@@ -221,10 +221,10 @@ section {
 
 .tertiary-container {
   display: flex;
-  justify-content: space-evenly;
   flex-direction: column;
+  justify-content: space-around;
   text-align: left;
-  margin-left: 5%;
+ 
 }
 
 .title-projects {
@@ -232,6 +232,7 @@ section {
   font-family: var(--font-text);
   font-size: 4rem;
   font-weight: 200;
+  margin-left: 5%;
 }
 
 /* CARD */
@@ -288,6 +289,21 @@ section {
 /*  contact */
 
 .contact {
-  height: 50vh;
-  background-color: #1c1c1c;
+  height: 25vh;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__anchor {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  font-family: var(--font-text);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: rgb(20, 6, 39);
 }
