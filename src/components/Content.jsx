@@ -4,6 +4,8 @@ import { RiLinkedinBoxFill } from "react-icons/ri";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import { AiOutlineLine } from "react-icons/ai";
 import { IoMailOpenOutline } from "react-icons/io5";
+
+import { HiOutlineEmojiHappy } from "react-icons/hi";
 // COMPONENTS
 import Footer from "./Footer";
 import Card from "../components/Card";
@@ -47,19 +49,16 @@ function Content() {
       </section>
 
       <section id="secondary-container" className="secondary-container">
+        <aside className="about">
         <h2 className="title-about">About me</h2>
-        <p className="p-about">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil saepe
-          in laboriosam ratione rerum quidem sunt harum reprehenderit voluptatem
-          eos dicta voluptatibus voluptate praesentium, provident, dolorem
-          delectus officiis aliquam excepturi! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit.Nobis corrupti saepe doloribus, molestiae
-          reprehenderit ducimus accusamus nulla laborum iste illum, labore
-          officiis odio vel enim atque sequi corporis, adipisci earum! Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Minus repellendus
-          dolor itaque blanditiis
-        </p>
+          <p className="p-secondary">
+          Hi there! You can call me Leo if you want! <span className="br-span"></span> I'm a React enthusiast. Always seeking new ways to craft amazing digital experiences, I value continuous learning and teamwork. I'm open to exciting challenges and growth opportunities in the world of web development. Let's create something awesome together!
+
+          </p>
+          <a className="contact-btn" href="#contact">Contact me</a>
+        </aside>
       </section>
+
 
       <section id="tertiary-container" className="tertiary-container">
         <h2 className="title-projects">Lastest Projects</h2>

@@ -1,52 +1,36 @@
-import cardImg from "../assets/img/card.jpg";
+import cardImg from "../assets/img/cateeo.jpg";
+import { FaJs } from "react-icons/fa";
+
+{
+  /* <img src={cardImg} alt="card1" /> */
+}
 // importar imagem como funcao src={cardImg}
 
 function Card() {
   return (
-    <div className="cards">
-      <div className="card">
+    <div className="card">
+      <div className="img-card">
         <img src={cardImg} alt="card1" />
-        <div className="card__content">
-          <h2>Projeto 1</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sunt
-            ullam veritatis deleniti distinctio architecto. Cum, aperiam
-            perspiciatis!
-          </p>
-          <a href="#" className="demo_btn">
-            demo
-          </a>
-        </div>
       </div>
-      <div className="card">
-        <img src={cardImg} alt="card2" />
-        <div className="card__content">
-          <h2>Projeto 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sunt
-            ullam veritatis deleniti distinctio architecto. Cum, aperiam
-            perspiciatis!
-          </p>
-          <a href="#" className="demo_btn">
-            demo
-          </a>
-        </div>
-      </div>
-      <div className="card">
-        <img src={cardImg} alt="card3" />
-        <div className="card__content">
-          <h2>Projeto 3</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga sunt
-            ullam veritatis deleniti distinctio architecto. Cum, aperiam
-            perspiciatis!
-          </p>
-          <a href="#" className="demo_btn">
-            demo
-          </a>
-        </div>
+      <div className="card-content">
+        <h2>Decodificador</h2>
+        <p>
+          Com o objetivo de codificar e decodificar textos, este projeto é um
+          challenge construido durante o curso da Oracle One, usando HTML, CSS e
+          JS.
+        </p>
+        {/* <FaJs/> */}
+        <a
+          href="https://decodific.vercel.app/"
+          target="_Blank"
+          className="demo_btn"
+        >
+          Demo
+        </a>
       </div>
     </div>
+    
+    
   );
 }
 
