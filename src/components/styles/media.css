@@ -1,21 +1,37 @@
 @media only screen and (max-width: 600px) {
-  .container {
-      width: 90%;
+
+
+  .ul-nav {
+    text-align: center;
   }
 
+  .content-container {
+    margin-left: 0;
+  }
 
   .title-h1 {
     font-size: 1.2rem;
+    margin-left: 0.7rem;
+  }
+
+  .line {
+    margin-top: 0.2rem;
   }
 
   .title-content {
     font-size: 2rem;
+    text-align: center;
   }
 
   .title-items {
     flex-direction: column;
     align-items: center;
-    margin-right: 5%;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .content-container > a {
+    margin-left: 0;
   }
 
   .title-anchor {
@@ -56,7 +72,22 @@
     text-align: center;
     align-items: center;
     justify-content: space-evenly;
-    margin-right: 5%;
+  }
+
+  .p-skills { 
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .title-skills {
+    font-size: 3rem;
+    text-align: center;
+    
+  }
+
+  .skills {
+    margin-left: 0;
   }
 }
 

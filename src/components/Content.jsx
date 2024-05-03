@@ -59,6 +59,10 @@ function Content() {
         </aside>
       </section>
 
+      <section className="skills">
+        <h2 className="title-skills">Skills</h2>
+        <p className="p-skills">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt molestiae aspernatur, ea nemo, nesciunt velit dolorem modi voluptatem neque mollitia aut, tempore harum animi. Ea sapiente laudantium doloremque deserunt debitis.</p>
+      </section>
 
       <section id="tertiary-container" className="tertiary-container">
         <h2 className="title-projects">Lastest Projects</h2>
@@ -72,6 +76,8 @@ function Content() {
           Contacte me <IoMailOpenOutline />
         </a>
       </section>
+
+      
     </>
   );
 }
