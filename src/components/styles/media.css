@@ -11,11 +11,11 @@
 
   .title-h1 {
     font-size: 1.2rem;
-    margin-left: 0.7rem;
+    margin: 0 auto 0 auto;
   }
 
   .line {
-    margin-top: 0.2rem;
+    display: none;
   }
 
   .title-content {
