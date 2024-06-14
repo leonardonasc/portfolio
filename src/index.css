@@ -110,6 +110,7 @@ section {
   transition: all 0.15s ease-in-out;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 150px;
 }
 
 .title-anchor:hover {
@@ -145,6 +146,7 @@ section {
   position: absolute;
   text-align: center;
   bottom: 0;
+  margin: 0;
 }
 
 .footer-scroll a {
@@ -271,13 +273,6 @@ section {
 
 /*  contact */
 
-.contact {
-  height: 25vh;
-  background-color: var(--secondary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .contact__anchor {
   display: flex;
@@ -290,6 +285,18 @@ section {
   background-color: var(--primary-color);
   color: rgb(20, 6, 39);
 }
+
+
+.contact {
+  height: 25vh;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+
 
 /* skills */
 
@@ -313,3 +320,9 @@ section {
   font-family: var(--font-text);
   font-weight: 200;
 }
+
+.cards-div {
+  display: flex;
+  justify-content: space-around;
+}
+

@@ -72,6 +72,7 @@
     text-align: center;
     align-items: center;
     justify-content: space-evenly;
+    margin-left: 0;
   }
 
   .p-skills { 
@@ -89,6 +90,16 @@
   .skills {
     margin-left: 0;
   }
+
+  .cards-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    gap: 2px;
+  }
+
 }
 
 
