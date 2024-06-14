@@ -42,10 +42,9 @@ function Content() {
             LinkedIn
             <RiArrowRightUpLine />
           </a>
-          <a
-            className="title-anchor"
-            href="mailto:leonardo.nasmt@gmail.com"
-          >Contact <IoMailOpenOutline /></a>
+          <a className="title-anchor" href="mailto:leonardo.nasmt@gmail.com">
+            <IoMailOpenOutline /> Contact <RiArrowRightUpLine />
+          </a>
         </div>
 
         <Footer pag={"#secondary-container"} />
@@ -99,8 +98,7 @@ function Content() {
             url={"#"}
           />
         </div>
-        <div className="footer-teste">
-        </div>
+        <div className="footer-teste"></div>
       </section>
     </>
   );
