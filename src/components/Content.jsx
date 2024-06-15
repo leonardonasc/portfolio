@@ -81,6 +81,7 @@ function Content() {
           />
 
           <Card
+          
             titulo={"dd"}
             descricao={
               "Com o objetivo de codificar e decodificar textos, este projeto é um challenge construido durante o curso da Oracle One, usando HTML, CSS e JS. "
