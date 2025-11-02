@@ -16,7 +16,7 @@ export default function Home() {
         <div className="border-l-2 border-black absolute right-0 top-1/2 transform -translate-y-1/2 h-[200px] mr-4 opacity-20"></div>
       </div>
       <h2
-        className="text-black absolute bottom-5 right-3 text-9xl opacity-10"
+        className="text-black absolute bottom-5 right-3 text-6xl md:text-9xl opacity-10"
         style={{
           WebkitTextStroke: "2px black",
           color: "transparent",
