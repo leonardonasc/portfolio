@@ -11,23 +11,25 @@ export default function CopyMail() {
     const domain = "gmail.com";
 
     return (
-        <button
-            onClick={() => {
-                navigator.clipboard.writeText(`${user}${at}${domain}`)
-                setCopy(true);
-                setTimeout(() => setCopy(false), 2000);
-            }}
-            className="hover:cursor-pointer"
-        >
-            {copy ? (
-                <span className="flex items-center gap-x-1 text-green-400">
-                    <CopyCheck size={16} />
-                </span>
-            ) : (
-                <span className="flex items-center gap-x-1 hover:text-neutral-200">
-                    <Copy size={16} />
-                </span>
-            )}
-        </button>
+        <div className="border p-1 border-neutral-800/70 flex justify-center items-center  rounded-sm">
+            <button
+                onClick={() => {
+                    navigator.clipboard.writeText(`${user}${at}${domain}`)
+                    setCopy(true);
+                    setTimeout(() => setCopy(false), 2000);
+                }}
+                className="hover:cursor-pointer"
+            >
+                {copy ? (
+                    <span className="flex items-center gap-x-1 text-green-400">
+                        <CopyCheck size={16} />
+                    </span>
+                ) : (
+                    <span className="flex items-center gap-x-1 hover:text-neutral-200">
+                        <Copy size={16} />
+                    </span>
+                )}
+            </button>
+        </div>
     )
 }

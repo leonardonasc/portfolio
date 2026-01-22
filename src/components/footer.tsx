@@ -1,4 +1,4 @@
-import { Activity, Ellipsis, Minus } from "lucide-react"
+import { Minus } from "lucide-react"
 import TextClock from "./text-clock"
 
 export default function Footer() {
@@ -9,9 +9,10 @@ export default function Footer() {
             <div className="w-full md:w-[50%] py-4 flex gap-x-1 md:px-30 justify-center md:justify-between items-center font-mono text-sm">
                 <span className="hidden md:block">2026</span>
                 <div className="flex gap-x-1">
-                    Santa Catarina, Brazil <Minus size={20}/> <TextClock />
+                    Santa Catarina, Brazil <Minus size={20} /> <TextClock />
                 </div>
             </div>
+
         </div>
     )
 }
