@@ -1,9 +1,14 @@
 
-export default function Projects() {
+interface ProjectsProps {
+    title: string;
+    description: string;
+}
+
+export default function Projects({ title, description }: ProjectsProps) {
   return (
-    <div className="bg-neutral-700/20 md:w-[35%] h-30 p-4 rounded-lg">
-        <h1 className="mb-2 text-md">Text</h1>
-        <p className="line-clamp-3 text-sm text-zinc-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid minus, perferendis velit possimus, ea similique reiciendis ducimus</p>
+    <div className="border border-neutral-700/40 md:w-[35%] h-30 p-4 rounded-lg">
+        <h1 className="mb-2 text-md decoration-neutral-600">{title}</h1>
+        <p className="line-clamp-3 text-sm text-zinc-400">{description}</p>
     </div>
   )
 }

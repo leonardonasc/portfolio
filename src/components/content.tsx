@@ -14,19 +14,22 @@ export default function Content() {
                     <h1 className="font-semibold text-neutral-200">Leonardo Nascimento</h1>
                     <Language />
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non esse atque odit! Amet in quia porro, ratione cumque dolore officiis quasi quidem alias soluta modi, deleniti minus maxime repudiandae esse!</p>
+                <p>Full Stack Developer. <span className="underline font-mono decoration-neutral-500">Crafting</span> beautiful, scalable websites and applications. Always seeking new challenges and continuous growth.</p>
             </div>
             <div className="flex flex-col gap-y-1">
-                <h3 className="mb-2 text-md text-neutral-400">Projects</h3>
+                <h3 className="mb-2 text-md text-neutral-400">Projects that i've worked on</h3>
                 <div className="flex flex-col md:flex-row gap-y-3 md:gap-x-3 justify-between">
-                    <Projects />
-                    <Projects />
-                    <Projects />
+                    <Projects title="Cardly" description="Send meaningful digital cards to anyone, anytime." />
+                    <Projects title="InstaPix" description="Simple and secure Pix payments for livestreamers." />
+                    <Projects title="Kub.sh" description="Fast, free, and privacy-focused URL shortening service." />
                 </div>
             </div>
             <div className="flex flex-col gap-y-1">
-                <h3 className="mb-2 text-md text-neutral-400">Now</h3>
-                <p className="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsum perferendis voluptatibus nobis, porro hic ab. Accusamus magni, ullam inventore recusandae sapiente ut maiores quod error molestias in nihil provident?</p>
+                <h3 className="mb-4 text-md text-neutral-400">Now</h3>
+                <div className="flex flex-col gap-y-6">
+                    <p className="">Currently focused on building new projects and expanding my knowledge while pursuing my degree. Always learning and improving through hands-on experience.</p>
+                    <p>My goal is to create full-stack applications and charming web experiences driven by creativity and strong visual design. I enjoy turning ideas into real products and building experiences that are both functional and visually appealing.</p>
+                </div>
             </div>
             <div className="flex flex-col gap-y-1">
                 <h3 className="mb-2 text-md text-neutral-400">Contact</h3>
