@@ -8,7 +8,7 @@ export default function Content() {
     const domain = "gmail.com";
 
     return (
-        <div className="w-[50%] h-screen flex flex-col gap-y-15 py-25 px-30 text-neutral-200">
+        <div className="md:w-[50%] min-h-screen flex flex-col gap-y-15 py-25 px-10 md:px-30 text-neutral-200">
             <div className="flex flex-col gap-y-10">
                 <div className="flex justify-between items-center">
                     <h1 className="font-semibold text-neutral-200">Leonardo Nascimento</h1>
@@ -18,7 +18,7 @@ export default function Content() {
             </div>
             <div className="flex flex-col gap-y-1">
                 <h3 className="mb-2 text-md text-neutral-400">Projects</h3>
-                <div className="flex gap-x-3 justify-between">
+                <div className="flex flex-col md:flex-row gap-y-3 md:gap-x-3 justify-between">
                     <Projects />
                     <Projects />
                     <Projects />
