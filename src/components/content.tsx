@@ -4,19 +4,15 @@ import Projects from "./projects";
 
 export default function Content() {
 
-    // const user = "leonardo.nasmt";
-    // const at = "@";
-    // const domain = "gmail.com";
-
     return (
-        <div className="md:w-[50%] min-h-screen flex flex-col gap-y-15 py-25 px-10 md:px-30 text-neutral-200">
+        <div className="md:w-[50%] min-h-screen flex flex-col gap-y-15 py-25 px-10 md:px-30 line-h text-neutral-300 leading-6">
 
             <div className="flex flex-col gap-y-10">
                 <div className="flex justify-between items-center">
                     <h1 className="font-semibold text-neutral-200">Leonardo Nascimento</h1>
                     <Language />
                 </div>
-                <p>Full Stack Developer. <span className="underline underline-offset-2 font-mono decoration-neutral-600">Crafting</span> beautiful, scalable websites and applications. Always seeking new challenges and continuous growth.</p>
+                <h2>Full Stack Developer. <span className="underline underline-offset-2 font-mono decoration-neutral-600">Crafting</span> beautiful, scalable websites and applications. Always seeking new challenges and continuous growth.</h2>
             </div>
 
             <div className="flex flex-col gap-y-1">
@@ -38,7 +34,7 @@ export default function Content() {
 
             <div className="flex flex-col gap-y-1">
                 <h3 className="mb-2 text-md text-neutral-400">Contact</h3>
-                <div className="flex flex-col md:items-center md:flex-row">
+                <div className="flex flex-row items-center">
                     <p>Reach me at:</p>
                     <CopyMail />
                 </div>

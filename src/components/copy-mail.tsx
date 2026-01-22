@@ -24,15 +24,12 @@ export default function CopyMail() {
                 aria-label="Copy email"
             >
                 <span className="underline underline-offset-2 decoration-neutral-600 decoration-1">email.</span>
-                {copy ? (
-                    <span className="flex items-center gap-x-1 text-green-600">
-                        <CopyCheck size={16} />
-                    </span>
-                ) : (
-                    <span className="flex items-center gap-x-1 hover:text-neutral-200">
-                        <Copy size={16} />
-                    </span>
-                )}
+                <span
+                    className={`flex items-center gap-x-1 transition-colors duration-300 ${copy ? "text-green-600" : "text-neutral-400 hover:text-neutral-200"}`}
+                >
+                    {copy ? <CopyCheck size={16} /> : <Copy size={16} />}
+                </span>
+
             </button>
 
             <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded border border-neutral-700/30 px-2 py-1 text-xs text-neutral-200 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
