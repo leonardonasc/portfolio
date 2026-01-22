@@ -21,7 +21,7 @@ export default function CopyMail() {
                 className="hover:cursor-pointer"
             >
                 {copy ? (
-                    <span className="flex items-center gap-x-1 text-green-400">
+                    <span className="flex items-center gap-x-1 text-green-600">
                         <CopyCheck size={16} />
                     </span>
                 ) : (

@@ -38,7 +38,7 @@ export default function Content() {
 
             <div className="flex flex-col gap-y-1">
                 <h3 className="mb-2 text-md text-neutral-400">Contact</h3>
-                <div className="flex flex-col items-center md:flex-row gap-x-1">
+                <div className="flex flex-col md:items-center md:flex-row gap-x-1">
                     <p>Reach me at: </p>
                     <div className="flex gap-x-2 items-center">
                         <span className="underline decoration-neutral-600">{user}{at}{domain}</span>
