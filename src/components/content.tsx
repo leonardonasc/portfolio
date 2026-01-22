@@ -4,9 +4,9 @@ import Projects from "./projects";
 
 export default function Content() {
 
-    const user = "leonardo.nasmt";
-    const at = "@";
-    const domain = "gmail.com";
+    // const user = "leonardo.nasmt";
+    // const at = "@";
+    // const domain = "gmail.com";
 
     return (
         <div className="md:w-[50%] min-h-screen flex flex-col gap-y-15 py-25 px-10 md:px-30 text-neutral-200">
@@ -31,7 +31,7 @@ export default function Content() {
             <div className="flex flex-col gap-y-1">
                 <h3 className="mb-4 text-md text-neutral-400">Now</h3>
                 <div className="flex flex-col gap-y-6">
-                    <p className="">Currently focused on building new projects and expanding my knowledge while pursuing my degree. Always learning and improving through hands-on experience.</p>
+                    <p>Currently focused on building new projects and expanding my knowledge while pursuing my degree. Always learning and improving through hands-on experience.</p>
                     <p>My goal is to create full-stack applications and charming web experiences driven by creativity and strong visual design. I enjoy turning ideas into real products and building experiences that are both functional and visually appealing.</p>
                 </div>
             </div>
@@ -39,9 +39,9 @@ export default function Content() {
             <div className="flex flex-col gap-y-1">
                 <h3 className="mb-2 text-md text-neutral-400">Contact</h3>
                 <div className="flex flex-col md:items-center md:flex-row gap-x-1">
-                    <p>Reach me at: </p>
+                    <p>Reach me at:&#29;</p>
                     <div className="flex gap-x-2 items-center">
-                        <span className="underline decoration-neutral-600">{user}{at}{domain}</span>
+                        
                         <CopyMail />
                     </div>
                 </div>
