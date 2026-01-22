@@ -23,7 +23,7 @@ export default function CopyMail() {
                 className="hover:cursor-pointer flex gap-x-2 items-center"
                 aria-label="Copy email"
             >
-                <span className="underline decoration-neutral-600">{email}</span>
+                <span className="underline underline-offset-2 decoration-neutral-600 decoration-1">email.</span>
                 {copy ? (
                     <span className="flex items-center gap-x-1 text-green-600">
                         <CopyCheck size={16} />

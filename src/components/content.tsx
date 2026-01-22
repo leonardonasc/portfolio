@@ -16,7 +16,7 @@ export default function Content() {
                     <h1 className="font-semibold text-neutral-200">Leonardo Nascimento</h1>
                     <Language />
                 </div>
-                <p>Full Stack Developer. <span className="underline font-mono decoration-neutral-600">Crafting</span> beautiful, scalable websites and applications. Always seeking new challenges and continuous growth.</p>
+                <p>Full Stack Developer. <span className="underline underline-offset-2 font-mono decoration-neutral-600">Crafting</span> beautiful, scalable websites and applications. Always seeking new challenges and continuous growth.</p>
             </div>
 
             <div className="flex flex-col gap-y-1">
@@ -38,12 +38,9 @@ export default function Content() {
 
             <div className="flex flex-col gap-y-1">
                 <h3 className="mb-2 text-md text-neutral-400">Contact</h3>
-                <div className="flex flex-col md:items-center md:flex-row gap-x-1">
-                    <p>Reach me at:&#29;</p>
-                    <div className="flex gap-x-2 items-center">
-                        
-                        <CopyMail />
-                    </div>
+                <div className="flex flex-col md:items-center md:flex-row">
+                    <p>Reach me at:</p>
+                    <CopyMail />
                 </div>
             </div>
 
