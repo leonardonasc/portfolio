@@ -1,3 +1,4 @@
+import CopyMail from "./copy-mail";
 import Language from "./language-selector";
 import Projects from "./projects";
 
@@ -33,7 +34,10 @@ export default function Content() {
             </div>
             <div className="flex flex-col gap-y-1">
                 <h3 className="mb-2 text-md text-neutral-400">Contact</h3>
-                <p className="">You can reach me at <span className="underline decoration-neutral-400">{user}{at}{domain}</span>.</p>
+                <div className="flex gap-x-2">
+                    <p className=""><span className="font-sans">Reach me at:</span> <span className="underline decoration-neutral-400">{user}{at}{domain}</span>. </p>
+                    <CopyMail />
+                </div>
             </div>
         </div>
     )
