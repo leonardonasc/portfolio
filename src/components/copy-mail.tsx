@@ -25,7 +25,7 @@ export default function CopyMail() {
             >
                 <span className="underline underline-offset-2 decoration-neutral-600 decoration-1">email.</span>
                 <span
-                    className={`flex items-center gap-x-1 transition-colors duration-300 ${copy ? "text-green-600" : "text-neutral-400 hover:text-neutral-200"}`}
+                    className={`flex items-center gap-x-1 ${copy ? "text-green-600" : "text-neutral-400 hover:text-neutral-200"}`}
                 >
                     {copy ? <CopyCheck size={16} /> : <Copy size={16} />}
                 </span>
