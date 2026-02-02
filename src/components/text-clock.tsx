@@ -1,21 +1,19 @@
-"use client";
+"use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
-export default function TextClock() {
-  const [date, setDate] = useState<Date>(() => new Date());
+export function TextClock() {
+  const [time, setTime] = useState("")
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setDate(new Date());
-    }, 1000); 
+    const update = () =>
+      setTime(new Date().toLocaleTimeString("en-US"))
 
-    return () => clearInterval(interval);
-  }, []);
+    update()
+    const interval = setInterval(update, 1000)
 
-  return (
-    <h1 className="font-mono text-sm">
-      {date.toLocaleTimeString("en-US")}
-    </h1>
-  );
+    return () => clearInterval(interval)
+  }, [])
+
+  return <h1 className="font-mono text-sm">{time}</h1>
 }
