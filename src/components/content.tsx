@@ -1,6 +1,6 @@
 "use client";
 
-import { Slash } from "lucide-react";
+import { ArrowUpRight, GithubIcon, Slash } from "lucide-react";
 import CopyMail from "./copy-mail";
 import Projects from "./projects";
 import { useState } from "react";
@@ -58,7 +58,7 @@ export default function Content() {
                     <div className="flex gap-x-2 text-neutral-500 items-center text-sm">
                         <span className="hover:text-neutral-200 hover:underline cursor-pointer underline-offset-2" onClick={() => setLanguage("en")}
                             style={{ textDecoration: language === "en" ? "underline" : "none", color: language === "en" ? "#e5e5e5" : "#71717a" }}
-                            >EN</span>
+                        >EN</span>
                         <Slash size={14} />
                         <span className="hover:text-neutral-200 hover:underline cursor-pointer underline-offset-2" onClick={() => setLanguage("pt")} style={{ textDecoration: language === "pt" ? "underline" : "none", color: language === "pt" ? "#e5e5e5" : "#71717a" }}>PT</span>
                     </div>
@@ -84,10 +84,10 @@ export default function Content() {
             </div>
 
             <div className="flex flex-col gap-y-1">
-                <h3 className="mb-2 text-md text-neutral-400">{translations[language].contactTitle}</h3>
-                <div className="flex flex-row items-center">
-                    <p>{translations[language].contact}</p>
+                <h3 className="mb-6 text-md text-neutral-400">{translations[language].contactTitle}</h3>
+                <div className="flex flex-col items-start">
                     <CopyMail />
+                    <p className="flex items-center gap-x-2 mt-2"><a style={{ display: "flex", alignItems: "center", gap: "0.25rem" }} href="https://github.com/leonardonasc" target="_blank" className="hover:underline underline-offset-2">github <ArrowUpRight size={12} /></a></p>
                 </div>
             </div>
 

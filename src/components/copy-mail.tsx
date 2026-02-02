@@ -1,6 +1,6 @@
 "use client";
 
-import { Copy, CopyCheck } from "lucide-react";
+import { Copy, CopyCheck, Mail } from "lucide-react";
 import { useState } from "react";
 
 export default function CopyMail() {
@@ -13,28 +13,24 @@ export default function CopyMail() {
     const email = `${user}${at}${domain}`;
 
     return (
-        <div className="relative group p-1 flex justify-center items-center rounded-sm">
+        <div className="relative group flex justify-center items-center rounded-sm">
             <button
                 onClick={() => {
                     navigator.clipboard.writeText(email);
                     setCopy(true);
                     setTimeout(() => setCopy(false), 2000);
                 }}
-                className="hover:cursor-pointer flex gap-x-2 items-center"
+                className="hover:cursor-pointer flex items-center"
                 aria-label="Copy email"
             >
-                <span className="underline underline-offset-2 decoration-neutral-600 decoration-1">email.</span>
-                <span
-                    className={`flex items-center gap-x-1 ${copy ? "text-green-600" : "text-neutral-400 hover:text-neutral-200"}`}
-                >
-                    {copy ? <CopyCheck size={16} /> : <Copy size={16} />}
-                </span>
+                <span className="underline-offset-2 decoration-neutral-600 decoration-1 flex gap-x-2 items-center"><p>email </p> <Copy className="text-white" size={12} /></span>
+
 
             </button>
 
-            <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded border border-neutral-700/30 px-2 py-1 text-xs text-neutral-200 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+            {/* <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded ml-1 px-2 py-1 text-xs text-neutral-200 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                 {copy ? "Email copied" : "Copy email"}
-            </span>
+            </span> */}
 
         </div>
     );
