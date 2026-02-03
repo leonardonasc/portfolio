@@ -15,5 +15,5 @@ export function TextClock() {
     return () => clearInterval(interval)
   }, [])
 
-  return <h1 className="font-mono text-sm">{time}</h1>
+  return <h1 className="font-mono text-sm tabular-nums w-19 text-left">{time}</h1>
 }

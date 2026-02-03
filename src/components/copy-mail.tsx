@@ -23,14 +23,15 @@ export default function CopyMail() {
                 className="hover:cursor-pointer flex items-center"
                 aria-label="Copy email"
             >
-                <span className="underline-offset-2 decoration-neutral-600 decoration-1 flex gap-x-2 items-center"><p>email </p> <Copy className="text-white" size={12} /></span>
-
+                <span className="underline-offset-2 decoration-neutral-600 decoration-1 flex gap-x-2 items-center"><p>email </p> <Copy className="text-white" style={{ 
+                    color: copy ? "#22c55e" : "inherit"
+                }} size={12} /></span>
 
             </button>
 
-            {/* <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded ml-1 px-2 py-1 text-xs text-neutral-200 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+            <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap rounded ml-1 px-2 py-1 text-xs text-neutral-200 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                 {copy ? "Email copied" : "Copy email"}
-            </span> */}
+            </span>
 
         </div>
     );
