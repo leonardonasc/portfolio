@@ -6,7 +6,7 @@ export default function Education() {
         {
             id: 1,
             fromto: "2026 — Presente",
-            institution: "Estácio de Sá",
+            institution: "Universidade Estácio de Sá",
             title: "Análise e Desenvolvimento de Sistemas",
             where: "Santa Catarina, Brasil",
         },
@@ -19,7 +19,7 @@ export default function Education() {
         },
         {
             id: 3,
-            fromto: "2016 — 2018",
+            fromto: "2024",
             institution: "Oracle/Alura",
             title: "Oracle Next Education",
             where: "Brasil",
