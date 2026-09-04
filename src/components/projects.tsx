@@ -5,33 +5,13 @@ export default function Projects() {
 
 
     const projects = [
-        {
-            id: 1,
-            title: "Newtion",
-            type: ["Web", "Sistema Organizatório"],
-            inDev: true,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            stack: ["React", "Node.js", "TailwindCSS"],
-            repo: "#",
-            demo: "#",
-        },
-        {
-            id: 2,
-            title: "Diogo Defante",
-            type: ["Web", "Landing Page"],
-            inDev: false,
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            why: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            stack: ["Next.js", "TypeScript", "TailwindCSS"],
-            demo: "https://www.defante.com.br/",
-        },
+        { id: 1, title: "Newtion", type: ["Web", "Sistema Organizacional"], inDev: true, description: "Uma plataforma de organização pessoal que reúne tarefas, dashboard, wishlists, planejamento de viagens e calendário de eventos em um único lugar.", why: "O Newtion foi desenvolvido para centralizar diferentes áreas da organização pessoal em uma experiência simples e intuitiva, permitindo acompanhar tarefas, planejar viagens, gerenciar desejos e organizar eventos sem precisar utilizar várias ferramentas diferentes.", stack: ["Next.js", "Drizzle ORM", "PostgreSQL", "TailwindCSS", "Zod", "Better Auth"], repo: "#", demo: "#", }, { id: 2, title: "Diogo Defante", type: ["Web", "Landing Page"], inDev: false, description: "Landing page desenvolvida para o influenciador Diogo Defante, reunindo seus conteúdos, playlists, newsletter e principais redes sociais em um único espaço.", why: "O projeto foi criado para apresentar o conteúdo do Diogo Defante de forma direta e organizada, facilitando o acesso ao seu vídeo mais recente, playlists, newsletter e redes sociais a partir de uma única página.", stack: ["Next.js", "TypeScript", "TailwindCSS"], demo: "https://www.defante.com.br/", },
     ]
 
     return (
         <div className="w-full flex flex-col gap-5">
             {/* titulo */}
-           <Title title="Projetos em destaque" subtitle="01 — Projetos" />
+            <Title title="Projetos em destaque" subtitle="01 — Projetos" />
             {/* itens */}
             <div className="w-full flex flex-col gap-y-3">
                 {projects.map((project) => (

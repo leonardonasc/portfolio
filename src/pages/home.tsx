@@ -15,17 +15,23 @@ export default function Home() {
             <div className="w-full h-px bg-border" />
 
             {/* Conteúdo principal 01 */}
-            <MainContent />
+            <div className="py-4" id='main-content'>
+                <MainContent />
+            </div>
 
             <div className="w-full h-px bg-border my-15" />
 
             {/* Projetos 02 */}
-            <Projects />
+            <div className="py-4" id='projects'>
+                <Projects />
+            </div>
 
             <div className="w-full h-px bg-border my-15" />
 
             {/* Experiência 03 */}
-            <Experience />
+            <div className="py-4" id='experience'>
+                <Experience />
+            </div>
 
             <div className="w-full h-px bg-border my-15" />
 
@@ -34,7 +40,9 @@ export default function Home() {
 
             <div className="w-full h-px bg-border my-15" />
 
-            <Contact />
+            <div className="py-4" id='contact' >
+                <Contact />
+            </div>
 
             <div className="w-full h-px bg-border mt-15 mb-6" />
 

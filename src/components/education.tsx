@@ -16,6 +16,13 @@ export default function Education() {
             institution: "Senai",
             title: "Técnico em Desenvolvimento de Sistemas",
             where: "Santa Catarina, Brasil",
+        },
+        {
+            id: 3,
+            fromto: "2016 — 2018",
+            institution: "Oracle/Alura",
+            title: "Oracle Next Education",
+            where: "Brasil",
         }
     ]
 
@@ -28,7 +35,7 @@ export default function Education() {
         {
             id: 2,
             topic: "Backend",
-            stack: ["Node.js", "AdonisJS", "MySQL", "PostgreSQL", "MongoDB"],
+            stack: ["Node.js", "AdonisJS", "MySQL", "PostgreSQL", "Drizzle ORM", "Zod", "Better Auth"],
         },
         {
             id: 3,
@@ -38,7 +45,7 @@ export default function Education() {
         {
             id: 4,
             topic: "DevOps",
-            stack: ["Git", "GitHub Actions", "Vercel"],
+            stack: ["Git", "Vercel"],
         }
     ]
 
@@ -63,7 +70,7 @@ export default function Education() {
             <section className="w-full flex flex-wrap gap-x-3 gap-y-4 mt-5">
                 {technologies.map((tech) => (
                     <div key={tech.id} className="w-full flex flex-col gap-x-2">
-                        <h3 className="text-[20px] font-normal mb-4">{tech.topic}</h3>
+                        <h3 className="text-[20px] font-normal mb-2">{tech.topic}</h3>
                         <div className="flex flex-wrap items-center gap-2">
                             {tech.stack.map((item) => (
                                 <span key={item} className="text-sm text-muted hover:text-accent border border-border hover:border-accent transition-colors duration-200 px-3 py-1">{item}</span>

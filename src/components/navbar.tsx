@@ -5,13 +5,21 @@ export default function Navbar() {
     return (
         <div className="w-full flex justify-between items-center mb-5 py-3">
             {/* logo */}
-            <h1 className="font-extrabold text-lg">LN<span className="text-accent">.</span></h1>
+            <a href="#main-content">
+                <h1 className="font-extrabold text-lg hover:cursor-pointer">LN<span className="text-accent">.</span></h1>
+            </a>
 
             {/* navigation */}
             <ul className="gap-6 text-xs text-muted hidden md:flex">
-                <li className="hover:text-accent">Projetos</li>
-                <li className="hover:text-accent">Experiência</li>
-                <li className="hover:text-accent">Contato</li>
+                <li className="hover:text-accent hover:cursor-pointer">
+                    <a href="#projects">Projetos</a>
+                </li>
+                <li className="hover:text-accent hover:cursor-pointer">
+                    <a href="#experience">Experiência</a>
+                </li>
+                <li className="hover:text-accent hover:cursor-pointer">
+                    <a href="#contact">Contato</a>
+                </li>
             </ul>
 
 
