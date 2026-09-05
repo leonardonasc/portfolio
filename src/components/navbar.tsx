@@ -30,7 +30,9 @@ export default function Navbar() {
                     <span className="relative inline-flex size-2 rounded-full bg-accent" />
                 </span>
 
-                <span className="text-xs text-muted font-normal">Disponível para oportunidades</span>
+                <a href="#contact" className="hover:text-accent hover:cursor-pointer">
+                    <span className="text-xs text-muted font-normal">Disponível para oportunidades</span>
+                </a>
             </div>
         </div>
     )
