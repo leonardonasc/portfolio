@@ -1,7 +1,7 @@
 
 export default function ContactPlus() {
     return (
-        <ul className="flex gap-2 md:gap-x-10 text-xs text-muted">
+        <ul className="flex gap-x-6 md:gap-x-10 text-xs text-muted">
             <li>
                 <a href="mailto:leonardo.nasmt@gmail.com" className="hover:text-accent hover:cursor-pointer">
                     E-mail ↗

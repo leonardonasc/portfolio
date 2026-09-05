@@ -30,12 +30,12 @@ export default function Education() {
         {
             id: 1,
             topic: "Frontend",
-            stack: ["Next.js", "Vite", "React", "Tailwind CSS", "TypeScript", "JavaScript", "HTML", "CSS"],
+            stack: ["Next.js", "Vite", "React", "Tailwind CSS", "Framer Motion", "Styled Components", "TypeScript", "JavaScript", "HTML", "CSS"],
         },
         {
             id: 2,
             topic: "Backend",
-            stack: ["Node.js", "AdonisJS", "MySQL", "PostgreSQL", "Drizzle ORM", "Zod", "Better Auth"],
+            stack: ["Node.js", "AdonisJS", "MySQL", "PostgreSQL", "Drizzle ORM", "Zod", "Better Auth", "NeonDB"],
         },
         {
             id: 3,
