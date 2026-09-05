@@ -9,7 +9,7 @@ import Projects from "../components/projects";
 
 export default function Home() {
     return (
-        <div className="w-full flex flex-col p-5 md:px-96">
+        <div className="w-full flex flex-col p-5 md:px-16 xl:px-40 2xl:px-96">
             <Navbar />
             {/* divider */}
             <div className="w-full h-px bg-border" />
