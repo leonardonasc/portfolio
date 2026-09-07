@@ -15,9 +15,9 @@ export default function MainContent() {
                 </p>
 
                 <div className='flex w-full items-center mt-3 justify-between md:justify-normal'>
-                    <button className='hover:cursor-pointer bg-accent text-background flex gap-2 px-5 md:px-4 py-4 text-sm font-semibold hover:bg-accent/80 transition-colors'>
+                    <a href="#contact" className='hover:cursor-pointer bg-accent text-background flex gap-2 px-5 md:px-4 py-4 text-sm font-semibold hover:bg-accent/80 transition-colors'>
                         Vamos conversar <span >↗</span>
-                    </button>
+                    </a>
                     <a href="#projects" className='text-muted text-xs px-9 py-3 flex md:ml-4 gap-x-3 items-center hover:text-accent/80 transition-colors'>
                         Ver projetos <span className='text-accent'>↓</span>
                     </a>
