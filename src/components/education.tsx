@@ -35,7 +35,7 @@ export default function Education() {
         {
             id: 2,
             topic: "Backend",
-            stack: ["Node.js", "AdonisJS", "MySQL", "PostgreSQL", "Drizzle ORM", "Zod", "Better Auth", "NeonDB"],
+            stack: ["Node.js", "AdonisJS", "MySQL", "PostgreSQL", "Drizzle ORM", "Zod", "Better Auth", "NeonDB", "Postman", "Rest API"],
         },
         {
             id: 3,
