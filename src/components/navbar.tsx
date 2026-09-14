@@ -1,39 +1,72 @@
-'use client'
+import { ArrowUpRight } from "lucide-react";
 
 export default function Navbar() {
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 md:px-8 xl:px-10">
+        {/* Logo */}
+        <a
+          href="#main-content"
+          className="group"
+          aria-label="Voltar ao início"
+        >
+          <span className="font-extrabold text-lg tracking-tighter">
+            LN<span className="text-accent">.</span>
+          </span>
+        </a>
 
-    return (
-        <div className="w-full flex justify-between items-center mb-5 py-3">
-            {/* logo */}
-            <a href="#main-content">
-                <h1 className="font-extrabold text-lg hover:cursor-pointer">LN<span className="text-accent">.</span></h1>
-            </a>
+        {/* Navigation */}
+        <nav className="hidden md:block" aria-label="Navegação principal">
+          <ul className="flex items-center gap-7">
+            <li>
+              <a
+                href="#projects"
+                className="text-xs text-muted transition-colors hover:text-accent"
+              >
+                Projetos
+              </a>
+            </li>
 
-            {/* navigation */}
-            <ul className="gap-6 text-xs text-muted hidden md:flex">
-                <li className="hover:text-accent hover:cursor-pointer">
-                    <a href="#projects">Projetos</a>
-                </li>
-                <li className="hover:text-accent hover:cursor-pointer">
-                    <a href="#experience">Experiência</a>
-                </li>
-                <li className="hover:text-accent hover:cursor-pointer">
-                    <a href="#contact">Contato</a>
-                </li>
-            </ul>
+            <li>
+              <a
+                href="#experience"
+                className="text-xs text-muted transition-colors hover:text-accent"
+              >
+                Experiência
+              </a>
+            </li>
 
+            <li>
+              <a
+                href="#contact"
+                className="text-xs text-muted transition-colors hover:text-accent"
+              >
+                Contato
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-            {/* open to work */}
-            <div className="flex items-center gap-2 text-sm text-muted">
-                <span className="relative flex size-2">
-                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-accent/70" />
-                    <span className="relative inline-flex size-2 rounded-full bg-accent" />
-                </span>
+        {/* Availability */}
+        <a
+          href="#contact"
+          className="group flex items-center gap-2"
+        >
+          <span className="relative flex size-2">
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#1fc535]/70" />
+            <span className="relative inline-flex size-2 rounded-full bg-[#1fc535]" />
+          </span>
 
-                <a href="#contact" className="hover:text-accent hover:cursor-pointer">
-                    <span className="text-xs text-muted font-normal">Disponível para oportunidades</span>
-                </a>
-            </div>
-        </div>
-    )
+          <span className="flex text-xs text-muted transition-colors group-hover:text-accent sm:inline">
+            Disponível para oportunidades
+          </span>
+
+          <ArrowUpRight
+            size={13}
+            className="text-muted transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          />
+        </a>
+      </div>
+    </header>
+  );
 }

@@ -20,7 +20,7 @@ export default function Experience() {
                 <Title title="Experiência profissional" subtitle="02 — Trajetória" />
 
                 {/* Conteúdo da experiência */}
-                <section className="">
+                <section>
                     {experiences.map((experience) => (
                         <article key={experience.id} className="w-full border-l border-accent p-5 flex flex-col gap-4 mt-5">
                             {/* Header */}

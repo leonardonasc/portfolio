@@ -11,7 +11,8 @@ export default function MainContent() {
                     Construo produtos digitais <span className='text-accent'>claros, rápidos</span> e feitos para crescer.
                 </h1>
                 <p className='text-muted text-[14px] md:text-[16px] md:w-full lg:w-175 my-5'>
-                    1 ano e 4 meses de experiência desenvolvendo páginas web modernas e aplicações mobile, com atuação prática em frontend e backend. Desenvolvi interfaces responsivas, sistemas de gerenciamento e produtos digitais personalizados utilizando tecnologias como Next.js, Tailwind CSS, AdonisJS, MySQL e Expo, sempre com foco em performance e experiência do usuário.
+                    Desenvolvedor Full Stack com 1 ano e 4 meses de experiência prática, criando aplicações web e mobile modernas, responsivas e funcionais. Trabalho no desenvolvimento de produtos digitais personalizados, desde interfaces e experiências de usuário até APIs, regras de negócio e integração com bancos de dados. Utilizo tecnologias como Next.js, React, Tailwind CSS, AdonisJS, MySQL e Expo, com foco em performance, qualidade e soluções que unem bom design e tecnologia.
+
                 </p>
 
                 <div className='flex w-full items-center mt-3 justify-between md:justify-normal'>
