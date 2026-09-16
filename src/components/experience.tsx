@@ -10,6 +10,14 @@ export default function Experience() {
             company: "BluePaper.io",
             companyLink: "https://bluepaper.io",
             description: "Desenvolvimento de páginas web modernas e aplicações mobile, atuando em frontend e backend. Criação de interfaces responsivas, sistemas de gerenciamento e produtos digitais personalizados com Next.js, Tailwind CSS, AdonisJS, MySQL e Expo.",
+        },
+        {
+            id: 2,
+            fromto: "Set 2026 — Atual",
+            role: "Desenvolvedor X Freelancer",
+            company: "X",
+            companyLink: "#",
+            description: "#",
         }
     ]
 
