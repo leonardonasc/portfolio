@@ -43,7 +43,7 @@ export default function Education() {
                                 md:grid-cols-[140px_1fr]
                                 gap-2 md:gap-6
                                 py-5
-                                border-b border-border
+                                border-b border-border border-dashed
                                 last:border-0
                             "
                         >

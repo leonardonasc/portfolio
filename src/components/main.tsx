@@ -1,7 +1,7 @@
 
 export default function MainContent() {
     return (
-        <div className='max-w-full h-full justify-center flex flex-col mt-15 gap-4'>
+        <div className='max-w-full h-full justify-center flex flex-col mt-5 gap-4'>
             {/* role */}
             <span className='text-accent uppercase text-[11px] tracking-wider'><span className='text-[11px] font-extrabold text-muted mr-2'>//</span>Desenvolvedor Full Stack</span>
 

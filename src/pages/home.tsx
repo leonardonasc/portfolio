@@ -7,7 +7,8 @@ import Navbar from "../components/navbar";
 import Projects from "../components/projects";
 import Technologies from "../components/technologies";
 
-const sections = "border-t border-border py-20";
+const sections =
+    "relative py-20 before:pointer-events-none before:absolute before:inset-y-0 before:left-1/2 before:-z-10 before:w-screen before:-translate-x-1/2 before:border-t before:border-border even:before:bg-foreground/40";
 
 export default function Home() {
     return (
@@ -16,13 +17,30 @@ export default function Home() {
             <Navbar />
 
             {/* Conteúdo */}
-            <main className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+            <main className="isolate w-full">
                 {/* 01 — Introdução */}
                 <section
                     id="main-content"
-                    className="py-16 md:py-20"
+                    className="
+                        relative overflow-hidden
+                        py-16 md:py-20
+                        bg-[radial-gradient(circle,_rgba(255,255,255,0.045)_1.5px,_transparent_1.5px)]
+                        [background-size:24px_24px]
+                    "
                 >
-                    <MainContent />
+                    {/* Glow superior esquerdo */}
+                    <div
+                        className="
+                            pointer-events-none absolute
+                            -top-40 -left-40
+                            h-96 w-96 rounded-full
+                            bg-accent/10
+                            blur-[120px]"
+                    />
+                    {/* Conteúdo limitado */}
+                    <div className="relative mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                        <MainContent />
+                    </div>
                 </section>
 
                 {/* 02 — Projetos */}
@@ -30,7 +48,9 @@ export default function Home() {
                     id="projects"
                     className={sections}
                 >
-                    <Projects />
+                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                        <Projects />
+                    </div>
                 </section>
 
                 {/* 03 — Experiência */}
@@ -38,7 +58,9 @@ export default function Home() {
                     id="experience"
                     className={sections}
                 >
-                    <Experience />
+                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                        <Experience />
+                    </div>
                 </section>
 
                 {/* 04 — Formação */}
@@ -46,7 +68,9 @@ export default function Home() {
                     id="education"
                     className={sections}
                 >
-                    <Education />
+                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                        <Education />
+                    </div>
                 </section>
 
                 {/* 05 — Tecnologias */}
@@ -54,7 +78,9 @@ export default function Home() {
                     id="technologies"
                     className={sections}
                 >
-                    <Technologies />
+                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                        <Technologies />
+                    </div>
                 </section>
 
                 {/* 06 — Contato */}
@@ -62,11 +88,11 @@ export default function Home() {
                     id="contact"
                     className={sections}
                 >
-                    <Contact />
+                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                        <Contact />
+                    </div>
                 </section>
             </main>
-
-
 
             {/* Footer */}
             <Footer />
