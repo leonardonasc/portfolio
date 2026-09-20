@@ -14,7 +14,7 @@ const sections =
 
 export default function Home() {
     return (
-        <div className="min-h-screen w-full overflow-x-hidden pt-[60px]">
+        <div className="min-h-screen w-full overflow-x-hidden pt-15">
             <Seo
                 title="Leonardo Nascimento — Full Stack Developer"
                 description="Portfólio de Leonardo Nascimento, desenvolvedor Full Stack especializado em aplicações web e mobile."
@@ -31,15 +31,15 @@ export default function Home() {
                     className="
                         relative overflow-hidden
                         py-16 md:py-20
-                        bg-[radial-gradient(circle,_rgba(255,255,255,0.045)_1.5px,_transparent_1.5px)]
-                        [background-size:24px_24px]
+                        bg-[radial-gradient(circle,rgba(255,255,255,0.045)_1.5px,transparent_1.5px)]
+                        bg-size-[24px_24px]
                     "
                 >
                     {/* Glow superior esquerdo */}
                     <div
                         className="
                             pointer-events-none absolute inset-0 z-0
-                            bg-[radial-gradient(circle_at_28%_0%,_rgba(34,211,238,0.05),_transparent_28%)]"
+                            bg-[radial-gradient(circle_at_28%_0%,rgba(34,211,238,0.05),transparent_28%)]"
                     />
                     {/* Conteúdo limitado */}
                     <div className="relative z-10 mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">

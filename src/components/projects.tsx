@@ -9,10 +9,10 @@ export default function Projects() {
             <Title title="Projetos em destaque" number="02" subtitle="Projetos" />
             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project) => (
-                    <Link key={project.id} to={`/projects/${project.slug}`} className="group relative flex min-h-[460px] flex-col overflow-hidden border border-border bg-foreground p-5 transition-colors duration-300 hover:border-accent">
+                    <Link key={project.id} to={`/projects/${project.slug}`} className="group relative flex min-h-115 flex-col overflow-hidden border border-border bg-foreground p-5 transition-colors duration-300 hover:border-accent">
                         <div className="absolute inset-x-0 top-0 h-48 overflow-hidden">
                             <img src={project.image} alt={`Imagem do projeto ${project.title}`} className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
-                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-foreground" />
+                            <div className="absolute inset-0 bg-linear-to-b from-transparent to-foreground" />
                         </div>
                         <div className="relative z-10 mt-44 flex flex-1 flex-col">
                             <div className="flex items-center justify-between mt-4">

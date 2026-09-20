@@ -1,12 +1,11 @@
 
 import { ArrowLeft, ArrowUpRight, GitBranch } from "lucide-react";
-import { useEffect, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Link, useParams } from "react-router-dom";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { getProject } from "../data/projects";
 import Title from "../components/title";
-import Seo from "../components/seo";
 
 function DetailSection({
     title,
@@ -34,10 +33,6 @@ export default function ProjectDetail() {
     const { slug } = useParams();
     const project = slug ? getProject(slug) : undefined;
 
-    useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-    }, [slug]);
-
     if (!project) {
         return (
             <main className="flex min-h-screen items-center justify-center p-10">
@@ -53,12 +48,7 @@ export default function ProjectDetail() {
     ] as const;
 
     return (
-        <div className="min-h-screen w-full pt-[73px]">
-            <Seo
-                title={`${project.title} — Leonardo Nascimento`}
-                description={project.description}
-                path={`/projects/${project.slug}`}
-            />
+        <div className="min-h-screen w-full pt-18.25">
             <Navbar />
 
             <main className="mx-auto w-full max-w-5xl px-5 py-10 md:px-8 md:py-16">
@@ -73,7 +63,7 @@ export default function ProjectDetail() {
 
                 {/* Hero */}
                 <header className="mt-14 md:mt-20">
-                    <Title title={project.title} subtitle={project.category} />
+                   <Title title={project.title} subtitle={project.category} />
 
                     <p className="mt-5 max-w-2xl text-lg leading-7 text-muted md:text-xl md:leading-8">
                         {project.description}
@@ -85,11 +75,7 @@ export default function ProjectDetail() {
                     <img
                         src={project.image}
                         alt={`Imagem do projeto ${project.title}`}
-                        width="1280"
-                        height="640"
-                        fetchPriority="high"
-                        decoding="async"
-                        className="block aspect-[16/8] w-full bg-foreground object-cover"
+                        className="aspect-16/8 w-full object-cover"
                     />
                 </div>
 
@@ -122,7 +108,7 @@ export default function ProjectDetail() {
                                 {project.features.map((feature) => (
                                     <li
                                         key={feature}
-                                        className="relative pl-4 leading-6 before:absolute before:left-0 before:top-[11px] before:size-1 before:rounded-full before:bg-accent"
+                                        className="relative pl-4 leading-6 before:absolute before:left-0 before:top-2.75 before:size-1 before:rounded-full before:bg-accent"
                                     >
                                         {feature}
                                     </li>
