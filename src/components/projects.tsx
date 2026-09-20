@@ -10,8 +10,8 @@ export default function Projects() {
             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project) => (
                     <Link key={project.id} to={`/projects/${project.slug}`} className="group relative flex min-h-[460px] flex-col overflow-hidden border border-border bg-foreground p-5 transition-colors duration-300 hover:border-accent">
-                        <div className="absolute inset-x-0 top-0 h-48 overflow-hidden">
-                            <img src={project.image} alt={`Imagem do projeto ${project.title}`} loading="lazy" decoding="async" width="1280" height="640" className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+                        <div className="absolute inset-x-0 top-0 h-[calc(12rem+1px)] overflow-hidden">
+                            <img src={project.image} alt={`Imagem do projeto ${project.title}`} loading="lazy" decoding="async" width="1280" height="640" className="block h-full w-full bg-foreground object-cover transition duration-700 ease-out group-hover:scale-105" />
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-foreground" />
                         </div>
                         <div className="relative z-10 mt-44 flex flex-1 flex-col">

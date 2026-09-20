@@ -89,7 +89,7 @@ export default function ProjectDetail() {
                         height="640"
                         fetchPriority="high"
                         decoding="async"
-                        className="aspect-[16/8] w-full object-cover"
+                        className="block aspect-[16/8] w-full bg-foreground object-cover"
                     />
                 </div>
 
