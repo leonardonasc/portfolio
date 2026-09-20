@@ -47,7 +47,7 @@ export default function ProjectDetail() {
     ] as const;
 
     return (
-        <div className="min-h-screen w-full">
+        <div className="min-h-screen w-full pt-[73px]">
             <Navbar />
 
             <main className="mx-auto w-full max-w-5xl px-5 py-10 md:px-8 md:py-16">

@@ -6,13 +6,14 @@ import MainContent from "../components/main";
 import Navbar from "../components/navbar";
 import Projects from "../components/projects";
 import Technologies from "../components/technologies";
+import ScrollReveal from "../components/scroll-reveal";
 
 const sections =
-    "relative py-20 before:pointer-events-none before:absolute before:inset-y-0 before:left-1/2 before:-z-10 before:w-screen before:-translate-x-1/2 before:border-t before:border-border even:before:bg-foreground/40";
+    "relative scroll-mt-[73px] py-20 before:pointer-events-none before:absolute before:inset-y-0 before:left-1/2 before:-z-10 before:w-screen before:-translate-x-1/2 before:border-t before:border-border even:before:bg-foreground/40";
 
 export default function Home() {
     return (
-        <div className="min-h-screen w-full overflow-x-hidden">
+        <div className="min-h-screen w-full overflow-x-hidden pt-[60px]">
             {/* Navbar */}
             <Navbar />
 
@@ -31,14 +32,11 @@ export default function Home() {
                     {/* Glow superior esquerdo */}
                     <div
                         className="
-                            pointer-events-none absolute
-                            -top-40 -left-40
-                            h-96 w-96 rounded-full
-                            bg-accent/10
-                            blur-[120px]"
+                            pointer-events-none absolute inset-0 z-0
+                            bg-[radial-gradient(circle_at_28%_0%,_rgba(34,211,238,0.14),_transparent_38%)]"
                     />
                     {/* Conteúdo limitado */}
-                    <div className="relative mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                    <div className="relative z-10 mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
                         <MainContent />
                     </div>
                 </section>
@@ -48,9 +46,11 @@ export default function Home() {
                     id="projects"
                     className={sections}
                 >
-                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
-                        <Projects />
-                    </div>
+                    <ScrollReveal>
+                        <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                            <Projects />
+                        </div>
+                    </ScrollReveal>
                 </section>
 
                 {/* 03 — Experiência */}
@@ -58,9 +58,11 @@ export default function Home() {
                     id="experience"
                     className={sections}
                 >
-                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
-                        <Experience />
-                    </div>
+                    <ScrollReveal>
+                        <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                            <Experience />
+                        </div>
+                    </ScrollReveal>
                 </section>
 
                 {/* 04 — Formação */}
@@ -68,9 +70,11 @@ export default function Home() {
                     id="education"
                     className={sections}
                 >
-                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
-                        <Education />
-                    </div>
+                    <ScrollReveal>
+                        <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                            <Education />
+                        </div>
+                    </ScrollReveal>
                 </section>
 
                 {/* 05 — Tecnologias */}
@@ -78,9 +82,11 @@ export default function Home() {
                     id="technologies"
                     className={sections}
                 >
-                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
-                        <Technologies />
-                    </div>
+                    <ScrollReveal>
+                        <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                            <Technologies />
+                        </div>
+                    </ScrollReveal>
                 </section>
 
                 {/* 06 — Contato */}
@@ -88,9 +94,11 @@ export default function Home() {
                     id="contact"
                     className={sections}
                 >
-                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
-                        <Contact />
-                    </div>
+                    <ScrollReveal>
+                        <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                            <Contact />
+                        </div>
+                    </ScrollReveal>
                 </section>
             </main>
 

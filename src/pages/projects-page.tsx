@@ -9,7 +9,7 @@ const categories: ProjectCategory[] = ["Front-end", "Full stack", "Mobile"];
 
 export default function Projects() {
     return (
-        <div className="min-h-screen w-full">
+        <div className="min-h-screen w-full pt-[73px]">
             <Navbar />
             <main className="mx-auto w-full max-w-7xl px-5 py-16 md:px-8 md:py-24 xl:px-10">
                 <Title title="Projetos" subtitle="01 — Portfólio" />
