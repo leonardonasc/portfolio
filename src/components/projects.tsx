@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, LinkIcon } from "lucide-react";
+import { ArrowRight, LinkIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import Title from "./title";
 import { projects } from "../data/projects";
