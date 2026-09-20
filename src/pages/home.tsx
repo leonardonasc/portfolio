@@ -52,11 +52,9 @@ export default function Home() {
                     id="projects"
                     className={sections}
                 >
-                    <ScrollReveal>
-                        <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
-                            <Projects />
-                        </div>
-                    </ScrollReveal>
+                    <div className="mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                        <Projects />
+                    </div>
                 </section>
 
                 {/* 03 — Experiência */}
