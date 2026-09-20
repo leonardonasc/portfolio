@@ -6,7 +6,7 @@ import { projects } from "../data/projects";
 export default function Projects() {
     return (
         <section className="flex w-full flex-col gap-8">
-            <Title title="Projetos em destaque" subtitle="01 — Projetos" />
+            <Title title="Projetos em destaque" number="02" subtitle="Projetos" />
             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project) => (
                     <Link key={project.id} to={`/projects/${project.slug}`} className="group relative flex min-h-[460px] flex-col overflow-hidden border border-border bg-foreground p-5 transition-colors duration-300 hover:border-accent">
