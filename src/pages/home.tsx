@@ -33,7 +33,7 @@ export default function Home() {
                     <div
                         className="
                             pointer-events-none absolute inset-0 z-0
-                            bg-[radial-gradient(circle_at_28%_0%,_rgba(34,211,238,0.14),_transparent_38%)]"
+                            bg-[radial-gradient(circle_at_28%_0%,_rgba(34,211,238,0.05),_transparent_28%)]"
                     />
                     {/* Conteúdo limitado */}
                     <div className="relative z-10 mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">

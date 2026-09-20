@@ -15,6 +15,10 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location.pathname]);
+
+  useEffect(() => {
     if (location.pathname !== "/") {
       return;
     }
@@ -63,32 +67,37 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-border font-sans bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-4 md:px-8 xl:px-10">
         {/* Logo */}
+
         <a
           href="/"
           onClick={(event) => {
             event.preventDefault();
-            handleNavigation("/");
+
+            if (location.pathname === "/") {
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+              window.history.replaceState(null, "", "/");
+              return;
+            }
+
+            navigate("/");
           }}
-          className="group"
-          aria-label="Voltar ao início"
+          className="text-lg font-bold tracking-tight text-neutral-100"
         >
-          <span className="font-extrabold text-lg tracking-tighter">
-            LN<span className="text-accent">.</span>
-          </span>
+          LN<span className="text-accent">.</span>
         </a>
 
         {/* Navigation */}
         <nav
-          className="hidden text-xs md:block"
+          className="hidden text-[11px] lg:text-xs md:block"
           aria-label="Navegação principal"
         >
-          <ul className="flex items-center gap-x-15 group">
+          <ul className="flex items-center gap-x-5 lg:gap-x-15 group">
             {links.map((link) => (
               <li key={link.href} className="flex items-center gap-2">
-                <span className={`border-b font-geist-mono text-sm transition-colors ${location.pathname === "/" && selected === link.id ? "border-accent  text-muted" : "border-transparent text-muted/30"}`}>
+                <span className={`border-b font-geist-mono transition-colors ${location.pathname === "/" && selected === link.id ? "border-accent  text-muted" : "border-transparent text-muted/30"}`}>
                   {link.number}
                 </span>
 
@@ -96,9 +105,21 @@ export default function Navbar() {
                   href={link.href}
                   onClick={(event) => {
                     event.preventDefault();
+
+                    if (link.id === "main-content") {
+                      if (location.pathname === "/") {
+                        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                        window.history.replaceState(null, "", "/");
+                      } else {
+                        navigate("/");
+                      }
+
+                      return;
+                    }
+
                     handleNavigation(link.href);
                   }}
-                  className={`uppercase transition-colors ${location.pathname === "/" && selected === link.id ? "text-neutral-100" : "text-muted/70 hover:text-muted/90"}`}
+                  className={`uppercase lg:font-bold tracking-widest transition-colors font-grotesk ${location.pathname === "/" && selected === link.id ? "text-neutral-100" : "text-muted/70 hover:text-muted/90"}`}
                 >
                   {link.label}
                 </a>
@@ -121,13 +142,13 @@ export default function Navbar() {
             <span className="relative inline-flex size-2 rounded-full bg-[#1fc535]" />
           </span>
 
-          <span className="flex text-xs font-bold text-green-300 sm:inline">
+          <span className="flex text-[10px] lg:text-xs font-bold text-green-300 sm:inline">
             Disponível para oportunidades
           </span>
 
           <ArrowUpRight
             size={13}
-            className="text-green-300 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            className="text-green-300 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 font-bold"
           />
         </a>
       </div>

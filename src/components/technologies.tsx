@@ -40,7 +40,7 @@ const technologies = [
 export default function Technologies() {
     return (
         <section>
-            <Title title="Tecnologias" subtitle="05 — Ferramentas" />
+            <Title title="Tecnologias" subtitle="Ferramentas" number='05' />
 
             <div className="mt-8 flex flex-col gap-4">
                 {technologies.map((tech, index) => (

@@ -25,7 +25,7 @@ export default function Experience() {
         <div>
             {/* titulo */}
             <div className="flex flex-col">
-                <Title title="Experiência profissional" subtitle="02 — Trajetória" />
+                <Title title="Experiência profissional" subtitle="Trajetória" number='02' />
 
                 {/* Conteúdo da experiência */}
                 <section>

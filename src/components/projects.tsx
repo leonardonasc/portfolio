@@ -1,12 +1,13 @@
-import { ArrowRight, ArrowUpRight, GitBranch } from "lucide-react";
+import { ArrowRight, ArrowUpRight, LinkIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import Title from "./title";
 import { projects } from "../data/projects";
+import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
     return (
         <section className="flex w-full flex-col gap-8">
-            <Title title="Projetos em destaque" subtitle="01 — Projetos" />
+            <Title title="Projetos em destaque" subtitle="Projetos" number='01' />
             <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project) => (
                     <Link key={project.id} to={`/projects/${project.slug}`} className="group relative flex min-h-[460px] flex-col overflow-hidden border border-border bg-foreground p-5 transition-colors duration-300 hover:border-accent">
@@ -29,11 +30,38 @@ export default function Projects() {
                             </div>
                         </div>
                         <footer className="relative z-10 mt-8 flex items-center justify-between border-t border-border pt-4">
-                            <span className="flex items-center gap-2 text-sm text-accent">Ver projeto <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" /></span>
-                            <span className="flex items-center gap-5">
-                                {project.repo && <a href={project.repo} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className="text-muted hover:text-accent" aria-label={`Repositório de ${project.title}`}><GitBranch className="size-4" /></a>}
-                                {project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className="text-muted hover:text-accent" aria-label={`Demo de ${project.title}`}><ArrowUpRight className="size-3.5" /></a>}
+                            <span className="group flex items-center gap-2 text-sm font-medium text-accent">
+                                Sobre o projeto
+                                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
                             </span>
+
+                            <div className="flex items-center gap-2">
+                                {project.repo && (
+                                    <a
+                                        href={project.repo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(event) => event.stopPropagation()}
+                                        className="flex size-8 items-center justify-center border border-border text-muted transition-all duration-200 hover:border-accent hover:text-accent"
+                                        aria-label={`Repositório de ${project.title}`}
+                                    >
+                                        <FaGithub className="size-4" />
+                                    </a>
+                                )}
+
+                                {project.demo && (
+                                    <a
+                                        href={project.demo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={(event) => event.stopPropagation()}
+                                        className="flex size-8 items-center justify-center border border-border text-muted transition-all duration-200 hover:border-accent hover:text-accent"
+                                        aria-label={`Demo de ${project.title}`}
+                                    >
+                                        <LinkIcon className="size-4" />
+                                    </a>
+                                )}
+                            </div>
                         </footer>
                     </Link>
                 ))}

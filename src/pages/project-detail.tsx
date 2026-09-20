@@ -1,10 +1,11 @@
 
 import { ArrowLeft, ArrowUpRight, GitBranch } from "lucide-react";
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { Link, useParams } from "react-router-dom";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { getProject } from "../data/projects";
+import Title from "../components/title";
 
 function DetailSection({
     title,
@@ -31,6 +32,10 @@ function DetailSection({
 export default function ProjectDetail() {
     const { slug } = useParams();
     const project = slug ? getProject(slug) : undefined;
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }, [slug]);
 
     if (!project) {
         return (
@@ -62,13 +67,7 @@ export default function ProjectDetail() {
 
                 {/* Hero */}
                 <header className="mt-14 md:mt-20">
-                    <span className="font-geist-mono text-xs uppercase tracking-wider text-accent">
-                        {project.category}
-                    </span>
-
-                    <h1 className="mt-3 text-4xl font-medium tracking-tight md:text-6xl">
-                        {project.title}
-                    </h1>
+                    <Title title={project.title} subtitle={project.category} />
 
                     <p className="mt-5 max-w-2xl text-lg leading-7 text-muted md:text-xl md:leading-8">
                         {project.description}

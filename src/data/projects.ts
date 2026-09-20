@@ -39,7 +39,7 @@ export const projects: Project[] = [
         frontEnd: ["Next.js", "TypeScript", "Tailwind CSS"],
         backEnd: ["Drizzle ORM", "PostgreSQL", "Better Auth"],
         tools: ["Zod", "Vercel", "GitHub"],
-        repo: "https://github.com/leonardonas/newtion-planner",
+        repo: "https://github.com/leonardonasc/newtion-planner",
         demo: "https://newtion-planner.vercel.app/",
     },
     {

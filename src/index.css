@@ -1,14 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import "tailwindcss";
 
 @theme {
   --color-background: #111315;
   --color-foreground: #171a1d;
-  --color-accent: #22D3EE;
+  --color-accent: #22d3ee;
+
   --text-primary: #f2f0eb;
-  /* --text-secondary: #89919a; */
+
   --color-muted: #8b929b;
   --color-border: #303439;
   --color-logo: #ce9c15;
+
+  --font-sans: "Sans", sans-serif;
+  --font-grotesk: "Space Grotesk", sans-serif;
   --font-geist: "Geist", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
 }

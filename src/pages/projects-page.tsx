@@ -12,7 +12,7 @@ export default function Projects() {
         <div className="min-h-screen w-full pt-[73px]">
             <Navbar />
             <main className="mx-auto w-full max-w-7xl px-5 py-16 md:px-8 md:py-24 xl:px-10">
-                <Title title="Projetos" subtitle="01 — Portfólio" />
+                <Title title="Projetos" subtitle="Portfólio" number='01'/>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">Uma seleção de produtos, experiências e interfaces construídos com intenção.</p>
                 <div className="mt-20 space-y-20">
                     {categories.map((category) => (

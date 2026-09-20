@@ -30,7 +30,8 @@ export default function Education() {
         <div>
             <Title
                 title="Formação"
-                subtitle="04 — Base técnica"
+                subtitle="Base técnica"
+                number='04'
             />
 
             <section className="mt-8">
