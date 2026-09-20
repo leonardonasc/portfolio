@@ -1,8 +1,7 @@
-import { ArrowRight, LinkIcon } from "lucide-react";
+import { ArrowRight, GitBranch, LinkIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import Title from "./title";
 import { projects } from "../data/projects";
-import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
     return (
@@ -12,7 +11,7 @@ export default function Projects() {
                 {projects.map((project) => (
                     <Link key={project.id} to={`/projects/${project.slug}`} className="group relative flex min-h-[460px] flex-col overflow-hidden border border-border bg-foreground p-5 transition-colors duration-300 hover:border-accent">
                         <div className="absolute inset-x-0 top-0 h-48 overflow-hidden">
-                            <img src={project.image} alt={`Imagem do projeto ${project.title}`} className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+                            <img src={project.image} alt={`Imagem do projeto ${project.title}`} loading="lazy" decoding="async" width="1280" height="640" className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-foreground" />
                         </div>
                         <div className="relative z-10 mt-44 flex flex-1 flex-col">
@@ -45,7 +44,7 @@ export default function Projects() {
                                         className="flex size-8 items-center justify-center border border-border text-muted transition-all duration-200 hover:border-accent hover:text-accent"
                                         aria-label={`Repositório de ${project.title}`}
                                     >
-                                        <FaGithub className="size-4" />
+                                        <GitBranch className="size-4" />
                                     </a>
                                 )}
 

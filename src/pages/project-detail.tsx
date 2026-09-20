@@ -85,6 +85,10 @@ export default function ProjectDetail() {
                     <img
                         src={project.image}
                         alt={`Imagem do projeto ${project.title}`}
+                        width="1280"
+                        height="640"
+                        fetchPriority="high"
+                        decoding="async"
                         className="aspect-[16/8] w-full object-cover"
                     />
                 </div>
