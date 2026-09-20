@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { getProject } from "../data/projects";
 import Title from "../components/title";
+import Seo from "../components/seo";
 
 function DetailSection({
     title,
@@ -53,6 +54,11 @@ export default function ProjectDetail() {
 
     return (
         <div className="min-h-screen w-full pt-[73px]">
+            <Seo
+                title={`${project.title} — Leonardo Nascimento`}
+                description={project.description}
+                path={`/projects/${project.slug}`}
+            />
             <Navbar />
 
             <main className="mx-auto w-full max-w-5xl px-5 py-10 md:px-8 md:py-16">

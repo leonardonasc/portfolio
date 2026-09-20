@@ -7,6 +7,7 @@ import Navbar from "../components/navbar";
 import Projects from "../components/projects";
 import Technologies from "../components/technologies";
 import ScrollReveal from "../components/scroll-reveal";
+import Seo from "../components/seo";
 
 const sections =
     "relative scroll-mt-[73px] py-20 before:pointer-events-none before:absolute before:inset-y-0 before:left-1/2 before:-z-10 before:w-screen before:-translate-x-1/2 before:border-t before:border-border even:before:bg-foreground/40";
@@ -14,6 +15,11 @@ const sections =
 export default function Home() {
     return (
         <div className="min-h-screen w-full overflow-x-hidden pt-[60px]">
+            <Seo
+                title="Leonardo Nascimento — Full Stack Developer"
+                description="Portfólio de Leonardo Nascimento, desenvolvedor Full Stack especializado em aplicações web e mobile."
+                path="/"
+            />
             {/* Navbar */}
             <Navbar />
 

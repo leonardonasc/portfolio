@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-ready-seo": {
+      "source": "caiodomingues/agent-ready-seo",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "d02208bae4a43cd26cf3d1360f8aa42bd912ed10b94f415f6ff2b2d86c46eee9"
+    }
+  }
+}
