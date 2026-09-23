@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import { getProject } from "../data/projects";
 import Title from "../components/title";
+import ProjectCarousel from "../components/project-carousel";
 
 function DetailSection({
     title,
@@ -51,7 +52,7 @@ export default function ProjectDetail() {
         <div className="min-h-screen w-full pt-18.25">
             <Navbar />
 
-            <main className="mx-auto w-full max-w-5xl px-5 py-10 md:px-8 md:py-16">
+            <main className="mx-auto w-full max-w-6xl px-5 py-10 md:px-8 md:py-16">
                 {/* Back */}
                 <Link
                     to="/#projects"
@@ -62,12 +63,18 @@ export default function ProjectDetail() {
                 </Link>
 
                 {/* Hero */}
-                <header className="mt-14 md:mt-20">
-                   <Title title={project.title} subtitle={project.category} />
-
-                    <p className="mt-5 max-w-2xl text-lg leading-7 text-muted md:text-xl md:leading-8">
-                        {project.description}
-                    </p>
+                <header className="mt-14 grid gap-8 border-b border-border pb-12 md:mt-20 md:grid-cols-[1fr_280px] md:items-end md:gap-12">
+                    <div>
+                        <Title title={project.title} subtitle={project.category} />
+                        <p className="mt-5 max-w-2xl text-lg leading-7 text-muted md:text-xl md:leading-8">
+                            {project.description}
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2 md:justify-end">
+                        {project.type.map((type) => (
+                            <span key={type} className="border border-border px-3 py-1.5 font-geist-mono text-[10px] text-muted">{type}</span>
+                        ))}
+                    </div>
                 </header>
 
                 {/* Image */}
@@ -75,7 +82,7 @@ export default function ProjectDetail() {
                     <img
                         src={project.image}
                         alt={`Imagem do projeto ${project.title}`}
-                        className="aspect-16/8 w-full object-cover"
+                        className="aspect-video w-full object-cover"
                     />
                 </div>
 
@@ -96,6 +103,19 @@ export default function ProjectDetail() {
                     <DetailSection title="Experiência e decisões">
                         {project.experience}
                     </DetailSection>
+
+                    {(project.desktopImages?.length || project.mobileImages?.length) ? (
+                        <section className="border-t border-border py-10 md:py-12">
+                            <div className="mb-8 grid gap-3 md:grid-cols-[180px_1fr] md:gap-6">
+                                <h2 className="font-geist-mono text-xs uppercase tracking-wider text-accent">Galeria</h2>
+                                <p className="max-w-2xl text-sm leading-6 text-muted">Detalhes da interface e dos principais fluxos do produto.</p>
+                            </div>
+                            <div className="grid gap-6 md:grid-cols-2">
+                                {project.desktopImages?.length ? <ProjectCarousel images={project.desktopImages} label="Desktop" /> : null}
+                                {project.mobileImages?.length ? <ProjectCarousel images={project.mobileImages} label="Mobile" /> : null}
+                            </div>
+                        </section>
+                    ) : null}
 
                     {/* Features */}
                     <section className="border-t border-border py-10 md:py-12">

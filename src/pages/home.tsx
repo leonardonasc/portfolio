@@ -29,8 +29,7 @@ export default function Home() {
                 <section
                     id="main-content"
                     className="
-                        relative overflow-hidden
-                        py-16 md:py-20
+                        relative flex min-h-[calc(100svh-3.75rem)] items-center overflow-hidden
                         bg-[radial-gradient(circle,rgba(255,255,255,0.045)_1.5px,transparent_1.5px)]
                         bg-size-[24px_24px]
                     "
@@ -42,7 +41,7 @@ export default function Home() {
                             bg-[radial-gradient(circle_at_28%_0%,rgba(34,211,238,0.05),transparent_28%)]"
                     />
                     {/* Conteúdo limitado */}
-                    <div className="relative z-10 mx-auto w-full max-w-7xl px-5 md:px-8 xl:px-10">
+                    <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-5 md:px-8 xl:px-10">
                         <MainContent />
                     </div>
                 </section>

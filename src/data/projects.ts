@@ -1,5 +1,10 @@
 export type ProjectCategory = "Front-end" | "Full stack" | "Mobile";
 
+export type ProjectImage = {
+    src: string;
+    alt: string;
+};
+
 export type Project = {
     id: number;
     slug: string;
@@ -9,6 +14,8 @@ export type Project = {
     inDev: boolean;
     description: string;
     image: string;
+    desktopImages?: ProjectImage[];
+    mobileImages?: ProjectImage[];
     overview: string;
     problem: string;
     solution: string;
@@ -30,7 +37,14 @@ export const projects: Project[] = [
         type: ["Web", "Full-Stack", "Sistema organizacional"],
         inDev: true,
         description: "Uma central de organização pessoal para transformar planos espalhados em próximos passos claros.",
-        image: "/projects/newtion.webp",
+        image: "/projects/newtion/desktop/newtion-landing.webp",
+        desktopImages: [
+            { src: "/projects/newtion/desktop/newtion-landing.webp", alt: "Tarefas do Newtion" },
+            { src: "/projects/newtion/desktop/newtion-dashboard.webp", alt: "Dashboard do Newtion" },
+            { src: "/projects/newtion/desktop/newtion-dashboard-dark.webp", alt: "Dashboard do Newtion (modo dark)" },
+            { src: "/projects/newtion/desktop/newtion-notes.webp", alt: "Notas do Newtion" },
+            { src: "/projects/newtion/desktop/newtion-404.webp", alt: "Página não encontrada" },
+        ],
         overview: "Newtion reúne tarefas, dashboard, wishlists, planejamento de viagens e calendário de eventos em uma única experiência. O projeto nasceu da vontade de criar um espaço pessoal que acompanhasse a complexidade da vida sem parecer uma planilha.",
         problem: "As ferramentas de organização costumam separar cada parte da rotina em produtos diferentes. Essa fragmentação cria atrito, espalha o contexto e dificulta enxergar o que realmente merece atenção.",
         solution: "Uma plataforma modular, com visão geral rápida e espaços dedicados para cada tipo de plano. A arquitetura permite evoluir cada módulo sem perder consistência visual ou os dados que conectam a rotina.",

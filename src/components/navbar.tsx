@@ -11,12 +11,15 @@ const links = [
 
 export default function Navbar() {
   const [selected, setSelected] = useState("main-content");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-  }, [location.pathname]);
+    if (!location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+  }, [location.hash, location.pathname]);
 
   useEffect(() => {
     if (location.pathname !== "/") {
@@ -128,29 +131,78 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        {/* Availability */}
-        <a
-          href="/#contact"
-          onClick={(event) => {
-            event.preventDefault();
-            handleNavigation("/#contact");
-          }}
-          className="group flex items-center gap-2 rounded-full border border-green-300 bg-green-300/10 px-3 py-2 text-xs font-medium text-green-300 transition-colors hover:bg-green-300/20"
-        >
-          <span className="relative flex size-2">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#1fc535]/70" />
-            <span className="relative inline-flex size-2 rounded-full bg-[#1fc535]" />
-          </span>
+        {isMenuOpen && (
+          <div className="absolute inset-x-0 top-full z-50 w-ful border-b border-border bg-background p-4 md:hidden">
+            <ul className="flex flex-col gap-4 text-sm">
+              {links.map((link) => (
+                <li key={link.href} className="flex items-center gap-2">
+                  <span className={`border-b font-geist-mono transition-colors ${location.pathname === "/" && selected === link.id ? "border-accent  text-muted" : "border-transparent text-muted/30"}`}>
+                    {link.number}
+                  </span>
+                  <a
+                    href={link.href}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      setIsMenuOpen(false);
+                      handleNavigation(link.href);
+                    }}
+                    className={`uppercase lg:font-bold tracking-widest transition-colors font-grotesk ${location.pathname === "/" && selected === link.id ? "text-neutral-100" : "text-muted/70 hover:text-muted/90"}`}
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
-          <span className="flex text-[10px] lg:text-xs font-bold text-green-300 sm:inline">
-            Disponível para oportunidades
-          </span>
+        <div className="flex flex-row-reverse items-center gap-4">
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isMenuOpen}
+            className="group flex md:hidden size-10 flex-col items-center justify-center gap-1.5"
+          >
+            <span
+              className={`h-0.5 w-6 rounded-full bg-white transition-all duration-300 ${isMenuOpen ? "translate-y-2 rotate-45" : ""
+                }`}
+            />
 
-          <ArrowUpRight
-            size={13}
-            className="text-green-300 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 font-bold"
-          />
-        </a>
+            <span
+              className={`h-0.5 w-6 rounded-full bg-white transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""
+                }`}
+            />
+
+            <span
+              className={`h-0.5 w-6 rounded-full bg-white transition-all duration-300 ${isMenuOpen ? "-translate-y-2 -rotate-45" : ""
+                }`}
+            />
+          </button>
+
+          {/* Availability */}
+          <a
+            href="/#contact"
+            onClick={(event) => {
+              event.preventDefault();
+              handleNavigation("/#contact");
+            }}
+            className="group flex items-center gap-2 rounded-full border border-green-300 bg-green-300/10 px-3 py-2 text-xs font-medium text-green-300 transition-colors hover:bg-green-300/20"
+          >
+            <span className="relative flex size-2">
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#1fc535]/70" />
+              <span className="relative inline-flex size-2 rounded-full bg-[#1fc535]" />
+            </span>
+            <span className="text-[10px] hidden md:inline lg:text-xs font-bold text-green-300">
+              Disponível para oportunidades
+            </span>
+            <ArrowUpRight
+              size={13}
+              className="text-green-300 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 font-bold"
+            />
+          </a>
+        </div>
+
       </div>
     </header>
   );

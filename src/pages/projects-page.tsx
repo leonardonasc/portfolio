@@ -10,7 +10,7 @@ const categories: ProjectCategory[] = ["Front-end", "Full stack", "Mobile"];
 
 export default function Projects() {
     return (
-        <div className="min-h-screen w-full pt-18.25]">
+        <div className="min-h-screen w-full pt-18.25">
             <Seo
                 title="Projetos — Leonardo Nascimento"
                 description="Projetos web, full stack e mobile desenvolvidos por Leonardo Nascimento."
