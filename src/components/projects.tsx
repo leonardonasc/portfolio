@@ -65,8 +65,8 @@ export default function Projects() {
                             <footer className="relative z-10 mt-8 flex items-center justify-between border-t border-border pt-4">
                                 <span className="flex items-center gap-2 text-sm text-accent">Ver projeto <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" /></span>
                                 <span className="flex items-center gap-5">
-                                    {project.repo && <a href={project.repo} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className="text-muted hover:text-accent" aria-label={`Repositório de ${project.title}`}><GitBranch className="size-4" /></a>}
-                                    {project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className="text-muted hover:text-accent" aria-label={`Demo de ${project.title}`}><ArrowUpRight className="size-3.5" /></a>}
+                                    {project.repo && <a href={project.repo} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className="text-muted hover:text-accent flex items-center gap-2 text-sm" aria-label={`Repositório de ${project.title}`}> Repo<GitBranch className="size-3" /></a>}
+                                    {project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer" onClick={(event) => event.stopPropagation()} className="text-muted hover:text-accent flex items-center gap-2 text-sm" aria-label={`Demo de ${project.title}`}>Demo<ArrowUpRight className="size-3.5" /> </a>}
                                 </span>
                             </footer>
                         </Link>
