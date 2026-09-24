@@ -91,10 +91,36 @@ export default function ProjectCarousel({ images, label }: ProjectCarouselProps)
                         type="button"
                         onClick={() => setIsPreviewOpen(false)}
                         aria-label="Fechar visualização ampliada"
-                        className="absolute right-5 top-5 flex size-10 items-center justify-center border border-white/30 text-white transition-colors hover:border-accent hover:text-accent"
+                        className="absolute right-5 top-5 z-10 flex size-10 items-center justify-center border border-white/30 text-white transition-colors hover:border-accent hover:text-accent"
                     >
                         <X className="size-5" />
                     </button>
+                    {hasMultipleImages && (
+                        <>
+                            <button
+                                type="button"
+                                onClick={(event) => {
+                                    event.stopPropagation();
+                                    showPrevious();
+                                }}
+                                aria-label={`Imagem anterior de ${label}`}
+                                className="absolute left-5 top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center border border-white/30 text-white transition-colors hover:border-accent hover:text-accent"
+                            >
+                                <ChevronLeft className="size-6" />
+                            </button>
+                            <button
+                                type="button"
+                                onClick={(event) => {
+                                    event.stopPropagation();
+                                    showNext();
+                                }}
+                                aria-label={`Próxima imagem de ${label}`}
+                                className="absolute right-5 top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center border border-white/30 text-white transition-colors hover:border-accent hover:text-accent"
+                            >
+                                <ChevronRight className="size-6" />
+                            </button>
+                        </>
+                    )}
                     <img
                         src={activeImage.src}
                         alt={activeImage.alt}

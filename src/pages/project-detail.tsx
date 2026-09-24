@@ -173,16 +173,20 @@ export default function ProjectDetail() {
                         </a>
                     )}
 
-                    {project.demo && (
+                    {project.demo ? (
                         <a
                             href={project.demo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 transition-colors hover:text-accent"
+                            className="inline-flex items-center gap-2 transition-colors text-accent hover:text-accent/60"
                         >
                             Demo
                             <ArrowUpRight className="size-3.5" />
                         </a>
+                    ) : (
+                        <span className="inline-flex items-center gap-2 text-red-500">
+                            Demo indisponível
+                        </span>
                     )}
                 </div>
             </main>

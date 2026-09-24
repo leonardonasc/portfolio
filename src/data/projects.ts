@@ -96,7 +96,6 @@ export const projects: Project[] = [
         frontEnd: ["React Native", "Expo", "TypeScript"],
         backEnd: ["API de perfis"],
         tools: ["Figma", "Expo Go", "GitHub"],
-        demo: "https://cardly.bluepaper.com.br/",
     },
     {
         id: 4,
