@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useState } from "react";
 import type { ProjectImage } from "../data/projects";
 
@@ -9,6 +9,7 @@ type ProjectCarouselProps = {
 
 export default function ProjectCarousel({ images, label }: ProjectCarouselProps) {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
     if (images.length === 0) return null;
 
@@ -25,19 +26,26 @@ export default function ProjectCarousel({ images, label }: ProjectCarouselProps)
 
     return (
         <div className="border border-border bg-foreground">
-            <div className="relative aspect-video overflow-hidden bg-[#24292d]">
-                <img
-                    src={activeImage.src}
-                    alt={activeImage.alt}
-                    className="h-full w-full object-cover transition-opacity duration-300"
-                />
+            <div className="relative flex min-h-64 items-center justify-center overflow-hidden bg-[#24292d]">
+                <button
+                    type="button"
+                    onClick={() => setIsPreviewOpen(true)}
+                    aria-label={`Ampliar imagem: ${activeImage.alt}`}
+                    className="flex max-h-[70vh] w-full cursor-zoom-in items-center justify-center"
+                >
+                    <img
+                        src={activeImage.src}
+                        alt={activeImage.alt}
+                        className="max-h-[70vh] w-full object-contain transition-opacity duration-300"
+                    />
+                </button>
                 {hasMultipleImages && (
                     <>
                         <button
                             type="button"
                             onClick={showPrevious}
                             aria-label={`Imagem anterior de ${label}`}
-                            className="absolute left-3 top-1/2 flex size-9 -translate-y-1/2 items-center justify-center border border-white/30 bg-background/80 text-primary transition-colors hover:border-accent hover:text-accent"
+                            className="absolute left-3 top-1/2 z-10 flex size-9 -translate-y-1/2 items-center justify-center border border-white/30 bg-background/80 text-primary transition-colors hover:border-accent hover:text-accent"
                         >
                             <ChevronLeft className="size-4" />
                         </button>
@@ -45,7 +53,7 @@ export default function ProjectCarousel({ images, label }: ProjectCarouselProps)
                             type="button"
                             onClick={showNext}
                             aria-label={`Próxima imagem de ${label}`}
-                            className="absolute right-3 top-1/2 flex size-9 -translate-y-1/2 items-center justify-center border border-white/30 bg-background/80 text-primary transition-colors hover:border-accent hover:text-accent"
+                            className="absolute right-3 top-1/2 z-10 flex size-9 -translate-y-1/2 items-center justify-center border border-white/30 bg-background/80 text-primary transition-colors hover:border-accent hover:text-accent"
                         >
                             <ChevronRight className="size-4" />
                         </button>
@@ -69,6 +77,30 @@ export default function ProjectCarousel({ images, label }: ProjectCarouselProps)
                             />
                         ))}
                     </div>
+                </div>
+            )}
+            {isPreviewOpen && (
+                <div
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label={`Visualização ampliada: ${activeImage.alt}`}
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-5 md:p-10"
+                    onClick={() => setIsPreviewOpen(false)}
+                >
+                    <button
+                        type="button"
+                        onClick={() => setIsPreviewOpen(false)}
+                        aria-label="Fechar visualização ampliada"
+                        className="absolute right-5 top-5 flex size-10 items-center justify-center border border-white/30 text-white transition-colors hover:border-accent hover:text-accent"
+                    >
+                        <X className="size-5" />
+                    </button>
+                    <img
+                        src={activeImage.src}
+                        alt={activeImage.alt}
+                        className="max-h-full max-w-full object-contain"
+                        onClick={(event) => event.stopPropagation()}
+                    />
                 </div>
             )}
         </div>

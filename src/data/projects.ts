@@ -1,4 +1,4 @@
-export type ProjectCategory = "Front-end" | "Full stack" | "Mobile";
+export type ProjectCategory = "Front-end" | "Full stack" | "Mobile" | "SaaS";
 
 export type ProjectImage = {
     src: string;
@@ -21,9 +21,9 @@ export type Project = {
     solution: string;
     experience: string;
     features: string[];
-    frontEnd: string[];
-    backEnd: string[];
-    tools: string[];
+    frontEnd?: string[];
+    backEnd?: string[];
+    tools?: string[];
     repo?: string;
     demo?: string;
 };
@@ -44,6 +44,10 @@ export const projects: Project[] = [
             { src: "/projects/newtion/desktop/newtion-dashboard-dark.webp", alt: "Dashboard do Newtion (modo dark)" },
             { src: "/projects/newtion/desktop/newtion-notes.webp", alt: "Notas do Newtion" },
             { src: "/projects/newtion/desktop/newtion-404.webp", alt: "Página não encontrada" },
+        ],
+        mobileImages: [
+            { src: "/projects/newtion/mobile/newtion-mobile-dashboard.webp", alt: "Dashboard do Newtion" },
+            { src: "/projects/newtion/mobile/newtion-mobile-nav.webp", alt: "Notas do Newtion" },
         ],
         overview: "Newtion reúne tarefas, dashboard, wishlists, planejamento de viagens e calendário de eventos em uma única experiência. O projeto nasceu da vontade de criar um espaço pessoal que acompanhasse a complexidade da vida sem parecer uma planilha.",
         problem: "As ferramentas de organização costumam separar cada parte da rotina em produtos diferentes. Essa fragmentação cria atrito, espalha o contexto e dificulta enxergar o que realmente merece atenção.",
@@ -93,6 +97,78 @@ export const projects: Project[] = [
         backEnd: ["API de perfis"],
         tools: ["Figma", "Expo Go", "GitHub"],
         demo: "https://cardly.bluepaper.com.br/",
+    },
+    {
+        id: 4,
+        slug: "landing-exposicao",
+        title: "Exposição Belas Artes PUCPR",
+        category: "Front-end",
+        type: ["Landing Page", "Web"],
+        inDev: false,
+        description: "Uma landing page para divulgar a exposição de trabalhos de alunos do curso de Artes Visuais da PUCPR.",
+        image: "/projects/kay/kay.webp",
+        overview: "A landing page apresenta os trabalhos de alunos do curso de Artes Visuais da PUCPR, com informações sobre a exposição, datas e horários, além de links para redes sociais e contato.",
+        problem: "A exposição precisava de uma presença online para divulgar os trabalhos dos alunos e atrair visitantes, mas não havia um site dedicado para isso.",
+        desktopImages: [
+            { src: "/projects/kay/kay.webp", alt: "Landing page da exposição" },
+            { src: "/projects/kay/kay2.webp", alt: "Landing page da exposição" },
+        ],
+        mobileImages: [
+            { src: "/projects/kay/kay-mobile.webp", alt: "Landing page da exposição mobile" },
+            { src: "/projects/kay/kay-mobile2.webp", alt: "Landing page da exposição mobile" },
+            { src: "/projects/kay/kay-mobile3.webp", alt: "Landing page da exposição mobile" },
+        ],
+        solution: "Uma landing page simples e direta, com foco na apresentação dos trabalhos e nas informações essenciais sobre a exposição.",
+        experience: "A experiência do usuário foi pensada para ser intuitiva e agradável, com navegação fácil e rápida, além de um design visualmente atraente que valoriza os trabalhos dos alunos.",
+        features: ["Cartões personalizados", "Compartilhamento rápido", "Perfil profissional", "Pré-visualização"],
+        frontEnd: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+        id: 5,
+        slug: "kubsh",
+        title: "kub.sh",
+        category: "Full stack",
+        type: ["SaaS", "Web"],
+        inDev: false,
+        description: "Uma plataforma de encurtamento de links com foco em performance, agilidade e recursos avançados de personalização.",
+        image: "/projects/kubsh/kubsh.webp",
+        overview: "O kub.sh foi uma plataforma de encurtamento de links que permitia aos usuários criar e gerenciar URLs personalizadas, com planos gratuitos e pagos. A aplicação oferece recursos avançados de geolocalização, rastreamento de acessos, assinaturas e otimização de SEO, incluindo funcionalidades exclusivas para usuários premium.",
+        problem: "Usuários e empresas precisavam de uma maneira rápida e eficiente de encurtar e gerenciar links, com maior controle sobre seus destinos, métricas de acesso e personalização. A plataforma também precisava oferecer recursos avançados para usuários premium, mantendo uma experiência simples e performática.",
+        solution: "Uma plataforma de encurtamento de links desenvolvida com foco em performance e agilidade, oferecendo criação de slugs personalizados, recursos de geolocalização, otimização de SEO, rastreamento de acessos e planos gratuitos e pagos com funcionalidades exclusivas.",
+        experience: "A experiência foi pensada para ser rápida e intuitiva, permitindo que os usuários criem e gerenciem links com facilidade. Recursos como slugs personalizados, geolocalização, assinaturas e ferramentas avançadas de SEO ampliam as possibilidades de uso, enquanto a estrutura da aplicação prioriza desempenho e eficiência.",
+        features: [
+            "Encurtamento de links",
+            "Slugs personalizados",
+            "Geolocalização de acessos",
+            "Otimização de SEO",
+            "Planos gratuitos e premium",
+            "Sistema de assinaturas",
+            "Rastreamento de acessos",
+        ],
+        frontEnd: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Radix UI",
+            "Framer Motion",
+            "React Hook Form",
+            "Zod",
+        ],
+        backEnd: [
+            "AdonisJS",
+            "MySQL",
+            "Lucid ORM",
+            "JWT",
+            "Argon2",
+            "Stripe",
+            "Resend",
+            "AWS S3",
+        ],
+        tools: [
+            "Git",
+            "Vercel",
+        ],
     },
 ];
 

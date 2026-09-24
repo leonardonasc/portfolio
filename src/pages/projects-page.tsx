@@ -20,6 +20,7 @@ export default function Projects() {
             <main className="mx-auto w-full max-w-7xl px-5 py-16 md:px-8 md:py-24 xl:px-10">
                 <Title title="Projetos" subtitle="Portfólio" number='01' />
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">Uma seleção de produtos, experiências e interfaces construídos com intenção.</p>
+                <span className="max-w-2xl text-xs leading-8 text-yellow-500">Lembrete: Alguns projetos/repos não estão disponíveis publicamente por motivos de privacidade do cliente e outros não citados como os templates que criei para acelerar o desenvolvimento podem ser encontrados no meu <a href="https://github.com/leonardonasc" target="_blank" rel="noopener noreferrer" className="text-accent underline">GitHub</a>.</span>
                 <div className="mt-20 space-y-20">
                     {categories.map((category) => (
                         <section key={category}>

@@ -17,14 +17,9 @@ function DetailSection({
 }) {
     return (
         <section className="border-t first:border-0 border-border py-10 md:py-12">
-            <div className="grid gap-6 md:grid-cols-[180px_1fr]">
-                <h2 className="font-geist-mono text-xs uppercase tracking-wider text-accent">
-                    {title}
-                </h2>
-
-                <div className="max-w-3xl text-base leading-7 text-muted md:text-[17px]">
-                    {children}
-                </div>
+            <Title title={title} />
+            <div className="mt-6 max-w-3xl text-base leading-7 text-muted md:text-[17px]">
+                {children}
             </div>
         </section>
     );
@@ -43,9 +38,9 @@ export default function ProjectDetail() {
     }
 
     const technologyGroups = [
-        ["Front-end", project.frontEnd],
-        ["Back-end", project.backEnd],
-        ["Ferramentas", project.tools],
+        ["Front-end", project.frontEnd ?? []],
+        ["Back-end", project.backEnd ?? []],
+        ["Ferramentas", project.tools ?? []],
     ] as const;
 
     return (
@@ -106,59 +101,59 @@ export default function ProjectDetail() {
 
                     {(project.desktopImages?.length || project.mobileImages?.length) ? (
                         <section className="border-t border-border py-10 md:py-12">
-                            <div className="mb-8 grid gap-3 md:grid-cols-[180px_1fr] md:gap-6">
-                                <h2 className="font-geist-mono text-xs uppercase tracking-wider text-accent">Galeria</h2>
-                                <p className="max-w-2xl text-sm leading-6 text-muted">Detalhes da interface e dos principais fluxos do produto.</p>
-                            </div>
-                            <div className="grid gap-6 md:grid-cols-2">
-                                {project.desktopImages?.length ? <ProjectCarousel images={project.desktopImages} label="Desktop" /> : null}
-                                {project.mobileImages?.length ? <ProjectCarousel images={project.mobileImages} label="Mobile" /> : null}
+                            <div className="mt-10 space-y-12">
+                                {project.desktopImages?.length ? (
+                                    <div>
+                                        <Title title="Desktop" />
+                                        <div className="mt-5">
+                                            <ProjectCarousel images={project.desktopImages} label="Desktop" />
+                                        </div>
+                                    </div>
+                                ) : null}
+                                {project.mobileImages?.length ? (
+                                    <div>
+                                        <Title title="Mobile" />
+                                        <div className="mt-5">
+                                            <ProjectCarousel images={project.mobileImages} label="Mobile" />
+                                        </div>
+                                    </div>
+                                ) : null}
                             </div>
                         </section>
                     ) : null}
 
                     {/* Features */}
                     <section className="border-t border-border py-10 md:py-12">
-                        <div className="grid gap-6 md:grid-cols-[180px_1fr]">
-                            <h2 className="font-geist-mono text-xs uppercase tracking-wider text-accent">
-                                Funcionalidades
-                            </h2>
-
-                            <ul className="grid gap-x-8 gap-y-3 text-sm text-muted sm:grid-cols-2">
-                                {project.features.map((feature) => (
-                                    <li
-                                        key={feature}
-                                        className="relative pl-4 leading-6 before:absolute before:left-0 before:top-2.75 before:size-1 before:rounded-full before:bg-accent"
-                                    >
-                                        {feature}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                        <Title title="Funcionalidades" />
+                        <ul className="mt-6 grid gap-x-8 gap-y-3 text-sm text-muted sm:grid-cols-2">
+                            {project.features.map((feature) => (
+                                <li
+                                    key={feature}
+                                    className="relative pl-4 leading-6 before:absolute before:left-0 before:top-2.75 before:size-1 before:rounded-full before:bg-accent"
+                                >
+                                    {feature}
+                                </li>
+                            ))}
+                        </ul>
                     </section>
 
                     {/* Technologies */}
                     <section className="border-t border-border py-10 md:py-12">
-                        <div className="grid gap-6 md:grid-cols-[180px_1fr]">
-                            <h2 className="font-geist-mono text-xs uppercase tracking-wider text-accent">
-                                Tecnologias
-                            </h2>
+                        <Title title="Tecnologias" />
+                        <div className="mt-8 grid gap-8 sm:grid-cols-3">
+                            {technologyGroups.map(([label, items]) => (
+                                <div key={label}>
+                                    <h3 className="text-sm font-medium">
+                                        {label}
+                                    </h3>
 
-                            <div className="grid gap-8 sm:grid-cols-3">
-                                {technologyGroups.map(([label, items]) => (
-                                    <div key={label}>
-                                        <h3 className="text-sm font-medium">
-                                            {label}
-                                        </h3>
-
-                                        <ul className="mt-3 space-y-1.5 text-sm text-muted">
-                                            {items.map((item) => (
-                                                <li key={item}>{item}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
+                                    <ul className="mt-3 space-y-1.5 text-sm text-muted">
+                                        {items.map((item) => (
+                                            <li key={item}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
                         </div>
                     </section>
                 </div>

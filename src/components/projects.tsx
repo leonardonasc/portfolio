@@ -41,7 +41,7 @@ export default function Projects() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.15 }}
             >
-                {projects.map((project) => (
+                {projects.slice(0, 3).map((project) => (
                     <motion.div key={project.id} variants={projectCardVariants}>
                         <Link to={`/projects/${project.slug}`} className="group relative flex min-h-115 flex-col overflow-hidden border border-border bg-foreground p-5 transition-colors duration-300 hover:border-accent">
                             <div className="absolute inset-x-0 top-0 h-48 overflow-hidden">
@@ -59,7 +59,7 @@ export default function Projects() {
                                 <p className="mt-6 text-sm leading-6 text-muted">{project.description}</p>
                                 <div className="mt-8">
                                     <span className="font-geist-mono text-xs font-bold">Tecnologias</span>
-                                    <div className="mt-3 flex flex-wrap gap-2">{[...project.frontEnd, ...project.backEnd, ...project.tools].map((tech) => <span key={tech} className="border border-border px-2.5 py-1 font-geist-mono text-[11px] text-muted">{tech}</span>)}</div>
+                                    <div className="mt-3 flex flex-wrap gap-2">{[...(project.frontEnd ?? []), ...(project.backEnd ?? []), ...(project.tools ?? [])].map((tech) => <span key={tech} className="border border-border px-2.5 py-1 font-geist-mono text-[11px] text-muted">{tech}</span>)}</div>
                                 </div>
                             </div>
                             <footer className="relative z-10 mt-8 flex items-center justify-between border-t border-border pt-4">

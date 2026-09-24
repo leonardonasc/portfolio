@@ -2,7 +2,7 @@
 interface TitleProps {
     title?: string;
     number?: string;
-    subtitle: string;
+    subtitle?: string;
 }
 
 export default function Title({ title, subtitle, number }: TitleProps) {
