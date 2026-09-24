@@ -76,7 +76,10 @@ export default function ProjectDetail() {
                 <div className="mt-12 overflow-hidden border border-border">
                     <img
                         src={project.image}
+                        srcSet={project.imageSrcSet}
+                        sizes="(min-width: 1024px) 1152px, 100vw"
                         alt={`Imagem do projeto ${project.title}`}
+                        decoding="async"
                         className="aspect-video w-full object-cover"
                     />
                 </div>

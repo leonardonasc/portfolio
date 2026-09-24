@@ -45,7 +45,7 @@ export default function Projects() {
                     <motion.div key={project.id} variants={projectCardVariants}>
                         <Link to={`/projects/${project.slug}`} className="group relative flex min-h-115 flex-col overflow-hidden border border-border bg-foreground p-5 transition-colors duration-300 hover:border-accent">
                             <div className="absolute inset-x-0 top-0 h-48 overflow-hidden">
-                                <img src={project.image} alt={`Imagem do projeto ${project.title}`} className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
+                                <img src={project.image} srcSet={project.imageSrcSet} sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw" alt={`Imagem do projeto ${project.title}`} loading="lazy" decoding="async" className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105" />
                                 <div className="absolute inset-0 bg-linear-to-b from-transparent to-foreground" />
                             </div>
                             <div className="relative z-10 mt-44 flex flex-1 flex-col">

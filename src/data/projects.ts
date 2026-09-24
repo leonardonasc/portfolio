@@ -14,6 +14,7 @@ export type Project = {
     inDev: boolean;
     description: string;
     image: string;
+    imageSrcSet?: string;
     desktopImages?: ProjectImage[];
     mobileImages?: ProjectImage[];
     overview: string;
@@ -38,6 +39,7 @@ export const projects: Project[] = [
         inDev: true,
         description: "Uma central de organização pessoal para transformar planos espalhados em próximos passos claros.",
         image: "/projects/newtion/desktop/newtion-landing.webp",
+        imageSrcSet: "/projects/newtion/desktop/newtion-landing-640.webp 640w, /projects/newtion/desktop/newtion-landing-960.webp 960w, /projects/newtion/desktop/newtion-landing-1280.webp 1280w",
         desktopImages: [
             { src: "/projects/newtion/desktop/newtion-landing.webp", alt: "Tarefas do Newtion" },
             { src: "/projects/newtion/desktop/newtion-dashboard.webp", alt: "Dashboard do Newtion" },
@@ -69,6 +71,7 @@ export const projects: Project[] = [
         inDev: false,
         description: "Uma landing page editorial para reunir conteúdo, playlists, newsletter e os principais canais do influenciador.",
         image: "/projects/defante.webp",
+        imageSrcSet: "/projects/defante-640.webp 640w, /projects/defante-960.webp 960w, /projects/defante-1280.webp 1280w",
         overview: "A página funciona como uma porta de entrada para o universo do Diogo Defante. O conteúdo foi organizado para que cada visita encontre rapidamente um vídeo, uma playlist ou um canal para acompanhar.",
         problem: "A audiência estava distribuída entre várias plataformas, sem um ponto central que desse contexto e conduzisse a pessoa para o conteúdo certo.",
         solution: "Uma interface leve, direta e com personalidade, que transforma links dispersos em uma narrativa visual simples de explorar.",
@@ -88,6 +91,7 @@ export const projects: Project[] = [
         inDev: false,
         description: "Cartões digitais personalizados para compartilhar contato e identidade profissional em poucos toques.",
         image: "/projects/cardly.webp",
+        imageSrcSet: "/projects/cardly-640.webp 640w, /projects/cardly-960.webp 960w, /projects/cardly-1280.webp 1280w",
         overview: "Cardly leva o cartão de visitas para uma experiência digital mais flexível. Cada perfil pode apresentar informações de contato com uma identidade própria e fácil de atualizar.",
         problem: "Cartões físicos são difíceis de manter atualizados e não oferecem espaço para mostrar o trabalho ou os canais de contato de uma pessoa.",
         solution: "Um aplicativo mobile focado em criação, personalização e compartilhamento instantâneo de cartões digitais.",
